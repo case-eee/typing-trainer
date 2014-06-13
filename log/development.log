@@ -9244,3 +9244,412 @@ Started GET "/assets/mainPost.html" for 127.0.0.1 at 2014-06-13 09:33:15 -0500
 
 
 Started GET "/assets/mainCreatePost.html" for 127.0.0.1 at 2014-06-13 09:33:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-13 11:15:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1220ms (Views: 1205.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:02 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-13 11:15:26 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 276ms (Views: 274.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:15:27 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-13 11:15:32 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-13 11:16:34 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 258ms (Views: 256.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-06-13 11:16:35 -0500
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 111ms (Views: 2.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-06-13 11:17:00 -0500
+Processing by PostsController#index as JSON
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 3.4ms)
