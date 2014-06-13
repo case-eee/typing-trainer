@@ -22,7 +22,7 @@ Blog.config(['$routeProvider', ($routeProvider) ->
   	.when('/post/new', { templateUrl: '../assets/mainCreatePost.html', controller: 'CreatePostCtrl' })
 		.when('/post/:postId', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' })
 
-	 $routeProvider.otherwise({ templateUrl: '../templates/mainIndex.html', controller: 'IndexCtrl' })
+	 $routeProvider.otherwise({ templateUrl: '../assets/templates/mainIndex.html', controller: 'IndexCtrl' })
 ])
 
 Blog.config(["$httpProvider", (provider) ->
