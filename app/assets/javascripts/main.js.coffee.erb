@@ -23,7 +23,7 @@ Blog.config(['$routeProvider', ($routeProvider) ->
   	.when('/post/new', { templateUrl: '../assets/mainCreatePost.html', controller: 'CreatePostCtrl' })
 		.when('/post/:postId', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' })
 
-	 $routeProvider.otherwise({ templateUrl: "<%= asset_path('mainIndex-a59a1adc1c2dee30d0a45a1a91119167.html')%>", controller: 'IndexCtrl' })
+	 $routeProvider.otherwise({ templateUrl: '../assets/mainIndex-a59a1adc1c2dee30d0a45a1a91119167.html', controller: 'IndexCtrl' })
 ])
 
 Blog.config(["$httpProvider", (provider) ->
