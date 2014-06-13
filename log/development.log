@@ -10016,3 +10016,186 @@ Migrating to CreateTracks (20140613195200)
   [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193642')
   [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613193710')[0m
   [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193723')
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-13 17:00:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 749ms (Views: 725.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/directives/global/empty.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+
+
+Started GET "/posts.json" for 127.0.0.1 at 2014-06-13 17:00:19 -0500
+Processing by PostsController#index as JSON
+  [1m[35mPost Load (13.7ms)[0m  SELECT "posts".* FROM "posts"
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 13.7ms)
+  [1m[36m (180.7ms)[0m  [1mDROP DATABASE IF EXISTS "blog_development"[0m
+  [1m[35m (0.2ms)[0m  DROP DATABASE IF EXISTS "travis_ci_test"
+  [1m[36m (1174.0ms)[0m  [1mCREATE DATABASE "blog_development" ENCODING = 'unicode'[0m
+  [1m[35m (565.4ms)[0m  CREATE DATABASE "travis_ci_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "languages" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "lessons" ("id" serial primary key, "difficulty_level" integer, "language_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "performances" ("id" serial primary key, "number_missed" integer, "total_characters" integer, "time_elapsed" time, "wpm" integer, "script_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (7.3ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "contents" text, "author" character varying(255), "post_date" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (12.3ms)[0m  CREATE TABLE "scripts" ("id" serial primary key, "text" character varying(255), "lesson_id" integer, "sub_difficulty" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (14.7ms)[0m  [1mCREATE TABLE "tracks" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (7.4ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613195200')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140612235539')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613192523')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613192537')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193642')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613193710')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193723')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (115.7ms)[0m  [1mDROP DATABASE IF EXISTS "travis_ci_test"[0m
+  [1m[35m (458.7ms)[0m  CREATE DATABASE "travis_ci_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.3ms)[0m  CREATE TABLE "languages" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "lessons" ("id" serial primary key, "difficulty_level" integer, "language_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (18.5ms)[0m  CREATE TABLE "performances" ("id" serial primary key, "number_missed" integer, "total_characters" integer, "time_elapsed" time, "wpm" integer, "script_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "contents" text, "author" character varying(255), "post_date" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "scripts" ("id" serial primary key, "text" character varying(255), "lesson_id" integer, "sub_difficulty" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "tracks" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613195200')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140612235539')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613192523')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613192537')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193642')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613193710')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193723')
+  [1m[36m (117.8ms)[0m  [1mDROP DATABASE IF EXISTS "blog_development"[0m
+  [1m[35m (666.6ms)[0m  CREATE DATABASE "blog_development" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.1ms)[0m  CREATE TABLE "languages" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "lessons" ("id" serial primary key, "difficulty_level" integer, "language_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.5ms)[0m  CREATE TABLE "performances" ("id" serial primary key, "number_missed" integer, "total_characters" integer, "time_elapsed" time, "wpm" integer, "script_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (7.4ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "contents" text, "author" character varying(255), "post_date" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "scripts" ("id" serial primary key, "text" character varying(255), "lesson_id" integer, "sub_difficulty" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "tracks" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613195200')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140612235539')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613192523')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613192537')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193642')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613193710')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193723')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (115.6ms)[0m  [1mDROP DATABASE IF EXISTS "blog_development"[0m
+  [1m[35m (117.4ms)[0m  DROP DATABASE IF EXISTS "travis_ci_test"
+  [1m[36m (452.6ms)[0m  [1mCREATE DATABASE "blog_development" ENCODING = 'unicode'[0m
+  [1m[35m (433.0ms)[0m  CREATE DATABASE "travis_ci_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.9ms)[0m  CREATE TABLE "languages" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "lessons" ("id" serial primary key, "difficulty_level" integer, "language_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.1ms)[0m  CREATE TABLE "performances" ("id" serial primary key, "number_missed" integer, "total_characters" integer, "time_elapsed" time, "wpm" integer, "script_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "contents" text, "author" character varying(255), "post_date" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.1ms)[0m  CREATE TABLE "scripts" ("id" serial primary key, "text" character varying(255), "lesson_id" integer, "sub_difficulty" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "tracks" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613195200')
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140612235539')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613192523')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613192537')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193642')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613193710')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193723')
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (117.1ms)[0m  [1mDROP DATABASE IF EXISTS "travis_ci_test"[0m
+  [1m[35m (470.3ms)[0m  CREATE DATABASE "travis_ci_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.8ms)[0m  CREATE TABLE "languages" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "lessons" ("id" serial primary key, "difficulty_level" integer, "language_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "performances" ("id" serial primary key, "number_missed" integer, "total_characters" integer, "time_elapsed" time, "wpm" integer, "script_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.8ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "contents" text, "author" character varying(255), "post_date" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (36.8ms)[0m  CREATE TABLE "scripts" ("id" serial primary key, "text" character varying(255), "lesson_id" integer, "sub_difficulty" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "tracks" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613195200')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140612235539')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613192523')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613192537')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193642')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140613193710')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140613193723')
