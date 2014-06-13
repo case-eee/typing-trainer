@@ -30,7 +30,10 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn'
+group :production do
+	gem 'unicorn'
+	gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
@@ -45,4 +48,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'rails_12factor', group: :production
