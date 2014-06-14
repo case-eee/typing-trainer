@@ -9,7 +9,7 @@
 			$scope.lessons = data
 			console.log('Successfully loaded lessons.')
 		).error( ->
-			console.error('Failed to load tracks.')
+			console.error('Failed to load lessons.')
 		)
 
 	$scope.selectLesson = (lesson) ->
