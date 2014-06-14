@@ -21,7 +21,7 @@ TypingTrainer.config(['$routeProvider', ($routeProvider) ->
 	  # Routes for '/post/'
   $routeProvider
   	.when('/tracks', { templateUrl: '../assets/mainTracks.html', controller: 'TracksCtrl'})
-  	.when('/tracks/:trackId', {templateUrl: '../assets/track.html', controller: 'LessonCtrl'})
+  	.when('/tracks/:trackName', {templateUrl: '../assets/mainLessons.html', controller: 'LessonCtrl'})
   	.when('/post/new', { templateUrl: '../assets/mainCreatePost.html', controller: 'CreatePostCtrl' })
 		.when('/post/:postId', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' })
 
