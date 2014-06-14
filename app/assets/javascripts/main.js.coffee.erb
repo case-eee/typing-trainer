@@ -12,19 +12,22 @@
 #= require_tree ./directives/global
 #= require_tree ./directives/main
 
-Blog = angular.module('Blog', ['ngRoute'])
+TypingTrainer = angular.module('TypingTrainer', ['ngRoute'])
 
 
-Blog.config(['$routeProvider', ($routeProvider) -> 
+TypingTrainer.config(['$routeProvider', ($routeProvider) -> 
   # Routes for '/post/'
   $routeProvider
-    .when('/post/new', { templateUrl: '../assets/mainCreatePost.html', controller: 'CreatePostCtrl'} )
-    .when('/post/:postId', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl'} )
+    .when('/lessons/:scriptId', { templateUrl: '../assets/mainScripts.html', controller: 'ScriptsCtrl'})
+    .when('/tracks', { templateUrl: '../assets/mainTracks.html', controller: 'TracksCtrl'})
+    .when('/tracks/:trackName', {templateUrl: '../assets/mainLessons.html', controller: 'LessonCtrl'})
+    .when('/post/new', { templateUrl: '../assets/mainCreatePost.html', controller: 'CreatePostCtrl' })
+    .when('/post/:postId', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' })
     .when('/gameplay', {templateUrl: '../assets/mainGamePlay.html', controller: 'GamePlayCtrl'} )
 
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrl'} )
 ])
 
-Blog.config(["$httpProvider", (provider) ->
+TypingTrainer.config(["$httpProvider", (provider) ->
   provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 ])
