@@ -16022,3 +16022,508 @@ Started GET "/languages.json" for 127.0.0.1 at 2014-06-14 15:26:30 -0500
 Processing by LanguagesController#index as JSON
   [1m[35mLanguage Load (0.3ms)[0m  SELECT "languages".* FROM "languages"
 Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 15:51:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (couldn't find file './game-play'
+  (in /Users/casey/Documents/angular_awesomeness/blog/app/assets/stylesheets/application.css:15)):
+    2: <html ng-app='TypingTrainer'>
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1020424920638994370_2163767800'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 15:56:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 618ms (Views: 598.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlay.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:04 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:05 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:05 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:56:05 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-14 15:56:05 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-14 15:56:05 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-14 15:56:21 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-14 15:56:21 -0500
+Processing by LanguagesController#index as JSON
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages"
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-14 15:56:22 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-14 15:56:22 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[36mLanguage Load (1.2ms)[0m  [1mSELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.5ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1  [["language_id", 1]]
+Completed 200 OK in 65ms (Views: 0.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-14 15:56:23 -0500
+
+
+Started GET "/scripts/1.json" for 127.0.0.1 at 2014-06-14 15:56:23 -0500
+Processing by ScriptsController#index as JSON
+  Parameters: {"lesson_id"=>"1"}
+  [1m[36mLesson Load (1.1ms)[0m  [1mSELECT  "lessons".* FROM "lessons"  WHERE "lessons"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mScript Load (0.6ms)[0m  SELECT "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  [["lesson_id", 1]]
+Completed 200 OK in 48ms (Views: 0.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 15:56:24 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 15:57:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlay.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 15:57:12 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-14 15:57:42 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-14 15:57:42 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlay.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:16 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlay.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlay.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-14 15:58:17 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-14 15:58:18 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-14 15:58:18 -0500
+Processing by LanguagesController#index as JSON
+  [1m[36mLanguage Load (0.5ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-14 15:58:19 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-14 15:58:19 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[35mLanguage Load (1.2ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
+  [1m[36mLesson Load (1.9ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-14 15:58:20 -0500
+
+
+Started GET "/scripts/1.json" for 127.0.0.1 at 2014-06-14 15:58:20 -0500
+Processing by ScriptsController#index as JSON
+  Parameters: {"lesson_id"=>"1"}
+  [1m[35mLesson Load (6.1ms)[0m  SELECT  "lessons".* FROM "lessons"  WHERE "lessons"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScript Load (5.5ms)[0m  [1mSELECT "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1[0m  [["lesson_id", 1]]
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 15:58:22 -0500
+
+
+Started GET "/scripts/1.json" for 127.0.0.1 at 2014-06-14 15:58:26 -0500
+Processing by ScriptsController#index as JSON
+  Parameters: {"lesson_id"=>"1"}
+  [1m[35mLesson Load (1.8ms)[0m  SELECT  "lessons".* FROM "lessons"  WHERE "lessons"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScript Load (6.2ms)[0m  [1mSELECT "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1[0m  [["lesson_id", 1]]
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 8.0ms)
