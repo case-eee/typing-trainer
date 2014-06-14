@@ -1,8 +1,8 @@
 $(document).ready(function(){
   var typos = 0;
   var counter = 0;
-  var totalChars = $("#base span").length
-  var totalKeypress = 0
+  var totalChars; // = $("code span").length;
+  var totalKeypress = 0;
   var startTime = new Date();
   var endTime;
   var CPS;
@@ -27,8 +27,8 @@ $(document).ready(function(){
   // ----------------------------------------
 
   var moveCursor = function(){
-    $("#base span:nth-child("+counter+")").removeClass('cursor')
-    $("#base span:nth-child("+(counter + 1)+")").addClass('cursor')
+    $("code span:nth-child("+counter+")").removeClass('cursor')
+    $("code span:nth-child("+(counter + 1)+")").addClass('cursor')
   };
 
   var markBGRed = function(){
@@ -41,8 +41,8 @@ $(document).ready(function(){
   };//incorrect
 
   var addClassTyped = function(){
-    $("#base span:nth-child("+counter+")").removeClass('untyped')
-    $("#base span:nth-child("+counter+")").addClass('typed')
+    $("code span:nth-child("+counter+")").removeClass('untyped')
+    $("code span:nth-child("+counter+")").addClass('typed')
   };
 
   var isComplete = function(){
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
   var getChars = function(){
     var chars = [];
-    $.each($("#base span"), function(i,e){
+    $.each($("code span"), function(i,e){
       chars.push(e.innerHTML)
     })
     return chars
@@ -79,6 +79,7 @@ $(document).ready(function(){
   var listen = function(){
     $(document).keypress(function(event){
       event.preventDefault()
+    totalChars = $("code span").length;
       totalKeypress++;
       moveCursor();
       newCheck( String.fromCharCode(event.which) );      
