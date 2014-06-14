@@ -1,4 +1,4 @@
-angular.module('Blog').factory('postData', ['$http', ($http) ->
+angular.module('TypingTrainer').factory('postData', ['$http', ($http) ->
 
   postData =
     data:
