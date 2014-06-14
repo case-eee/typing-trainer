@@ -1,11 +1,11 @@
 @IndexCtrl = ($scope, $location, $http, postData) ->
 
- $scope.data = postData.data
+ # $scope.data = postData.data
 
- postData.loadPosts(null)
+ # postData.loadPosts(null)
 
- $scope.viewPost = (postId) ->
-    $location.url('/post/'+postId)
+ $scope.play = ->
+  $location.url('/tracks')
 
   $scope.navNewPost = ->
     $location.url('/post/new')
