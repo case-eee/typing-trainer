@@ -14,3 +14,39 @@
  *= require_self
  */
  
+body {
+  background-color: #300000;
+}
+
+#game {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+pre code {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8ff;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding: 0.5em;
+  background: none repeat scroll 0% 0% #F8F8FF;
+}
+
+.typed {
+	color: green;
+}
+
+.cursor {
+	background-color: #B8B8B8;
+}
+
+.untyped {
+	color: #888888;
+}
+
+#stats {
+  text-align: center;
+	color: #A0A0A0;
+}
