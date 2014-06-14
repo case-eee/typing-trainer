@@ -1,5 +1,5 @@
 @PlayCtrl = ($scope, $http) ->
 	getScript = ->
-		$http.get()
+		# $http.get()
 
 @PlayCtrl.$inject = ['$scope', '$http']

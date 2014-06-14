@@ -15511,3 +15511,5665 @@ Processing by LessonsController#index as JSON
   [1m[35mLanguage Load (0.4ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
   [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
 Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 16:56:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 176ms (Views: 169.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:18 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:19 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 317ms (Views: 316.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:45 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:46 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:56:47 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 16:57:09 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 332ms (Views: 331.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:10 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 16:57:11 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:12 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-14 16:57:14 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-14 16:57:14 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 297ms (Views: 295.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:57 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 16:57:58 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:57:59 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:48 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 16:58:49 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 329ms (Views: 328.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:30 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:01:31 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:01:32 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:01:32 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:01:32 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:01:32 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:10:51 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 141ms
+
+ActionView::Template::Error ([stdin]:35:17: error: unmatched OUTDENT
+      sendData()
+                ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:11:58 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 136ms
+
+ActionView::Template::Error ([stdin]:35:15: error: unmatched OUTDENT
+      sendData
+              ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:12:30 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 171ms
+
+ActionView::Template::Error ([stdin]:35:22: error: unmatched OUTDENT
+      $scope.sendData
+                     ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:13:24 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 139ms
+
+ActionView::Template::Error ([stdin]:35:24: error: unmatched OUTDENT
+      $scope.sendData()
+                       ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:13:30 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 128ms
+
+ActionView::Template::Error ([stdin]:35:22: error: unmatched OUTDENT
+      $scope.sendData
+                     ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:13:37 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 127ms
+
+ActionView::Template::Error ([stdin]:35:24: error: unmatched OUTDENT
+      # $scope.sendData
+                       ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:14:50 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 147ms
+
+ActionView::Template::Error ([stdin]:31:5: error: unexpected if
+    if (counter === totalChars){
+    ^^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:15:52 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 142ms
+
+ActionView::Template::Error ([stdin]:36:5: error: unexpected if
+    if (counter === totalChars)
+    ^^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:16:28 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 146ms
+
+ActionView::Template::Error ([stdin]:31:18: error: unexpected =
+    if counter === totalChars
+                 ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:16:50 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 315ms (Views: 313.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:51 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:16:52 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:18:06 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 352ms (Views: 351.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:07 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:08 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:18:09 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:18:10 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:18:10 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:18:10 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:18:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:28:26 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 137ms
+
+ActionView::Template::Error ([stdin]:1:2: error: reserved word "function"
+(function() {
+ ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:29:02 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 215ms (Views: 214.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:03 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:29:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:30:08 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 280ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:09 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:30:10 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-14 17:30:24 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-14 17:30:24 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-14 17:30:26 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-14 17:30:26 -0500
+Processing by LanguagesController#index as JSON
+  [1m[35mLanguage Load (0.5ms)[0m  SELECT "languages".* FROM "languages"
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-14 17:30:30 -0500
+Processing by LanguagesController#index as JSON
+  [1m[36mLanguage Load (0.4ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:30:59 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:31:00 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:01 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:31:23 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 233ms (Views: 232.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:24 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:25 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:31:49 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 189ms (Views: 187.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:50 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:31:51 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:32:04 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 199ms (Views: 197.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:32:05 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:32:06 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:34:29 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 225ms (Views: 224.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:34:30 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:34:31 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:57 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:35:58 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 169ms (Views: 168.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:13 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:14 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:16 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 176ms (Views: 174.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:49 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:39:50 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:39:51 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 215ms (Views: 213.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:40:05 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:40:06 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 227ms (Views: 226.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:40 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:41:41 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:41:42 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:41:42 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:41:42 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:41:42 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:43:10 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 169ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:11 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:12 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:43:24 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 183ms (Views: 182.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:25 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:26 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 203ms (Views: 202.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:55 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:56 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:43:57 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:44:13 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 172ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:44:14 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:15 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:44:46 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:44:47 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:45:24 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 186ms (Views: 185.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:25 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:45:26 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 204ms (Views: 203.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:45:59 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:46:00 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:01 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 178ms (Views: 176.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:37 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 17:46:38 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:39 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:39 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:39 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 17:46:39 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 18:00:26 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 363ms
+
+ActionView::Template::Error ([stdin]:62:26: error: reserved word "function"
+    $(document).keypress(function(event){
+                         ^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 18:01:07 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 328ms
+
+ActionView::Template::Error ([stdin]:65:1: error: unexpected indentation
+      totalKeypress++;
+^^^^^^
+  (in /home/mohammad/Desktop/CodeTypingTrainer/app/assets/javascripts/controllers/main/mainGamePlayCtrl.js.coffee)):
+    3: <head>
+    4:   <title>Typing Trainer</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    6:   <%= javascript_include_tag 'application', controller_name %>
+    7:   <%= javascript_include_tag 'main' %> 
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1289458043038860514_70064245425580'
+
+
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mohammad/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 18:01:38 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 329ms (Views: 328.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:39 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:01:40 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:13 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:02:14 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 69ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:32 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:03:33 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:03:34 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:03:34 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:19 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 18:04:20 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:04:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game-play.css?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/game-play.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:36 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-14 18:13:37 -0500
