@@ -1,9 +1,11 @@
 @LessonCtrl = ($scope, $location, $http, $routeParams) ->
 	$scope.lessons = [{lesson_id: "Loading..."}]
 
+	trackName = $routeParams.trackName
+
 	getLessons = ->
 		data = $routeParams
-		$http.get('./lessons/JavaScript.json', data).success( (data) ->
+		$http.get('./lessons/' + trackName + '.json', data).success( (data) ->
 			$scope.lessons = data
 			console.log('Successfully loaded lessons.')
 		).error( ->
@@ -15,4 +17,4 @@
 
 	getLessons()
 
-@LessonCtrl.$inject = ['$scope', '$location', '$http']
+@LessonCtrl.$inject = ['$scope', '$location', '$http', '$routeParams']

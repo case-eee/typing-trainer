@@ -1,0 +1,131 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/casey/Documents/angular_awesomeness/blog/app/models/language.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/lesson_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/app/models/lesson.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/performance_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/app/models/performance.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/script_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/app/models/script.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/track_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/app/models/track.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/casey/Documents/angular_awesomeness/blog/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1402700115
+  }
+}
