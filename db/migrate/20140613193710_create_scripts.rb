@@ -1,4 +1,4 @@
-class CreateScripts < ActiveRecord::Migration
+Lessclass CreateScripts < ActiveRecord::Migration
   def change
     create_table :scripts do |t|
     	t.string :text
