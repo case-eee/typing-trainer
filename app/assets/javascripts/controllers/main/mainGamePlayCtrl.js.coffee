@@ -31,6 +31,7 @@
   $scope.CPS
 
   $scope.moveCursor = ->
+    # true
     $("code span:nth-child("+$scope.counter+")").removeClass('cursor')
     $("code span:nth-child("+($scope.counter + 1)+")").addClass('cursor')
 
@@ -53,12 +54,12 @@
       $scope.endTime = new Date()
       $scope.sendData()
 
-  @scope.sendData = ->
-    console.log("Total Keypress: " + $scope.totalKeypress)
-    console.log("Total totalChars: " + $scope.totalChars)
-    console.log("$scope.typos:" + $scope.typos)
-    console.log("Total time: " + (($scope.endTime - $scope.startTime)/1000))
-    console.log("Total $scope.CPS(chars per second): " + ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000)))
+  # $scope.sendData = ->
+  #   console.log("Total Keypress: " + $scope.totalKeypress)
+  #   console.log("Total totalChars: " + $scope.totalChars)
+  #   console.log("$scope.typos:" + $scope.typos)
+  #   console.log("Total time: " + (($scope.endTime - $scope.startTime)/1000))
+  #   console.log("Total $scope.CPS(chars per second): " + ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000)))
 
   $scope.getChars = ->
     chars = [];
@@ -66,6 +67,8 @@
       e = $("code span")[i]
       chars.push(e.innerHTML)
       chars
+
+  $scope.
 
   $scope.newCheck = (keypress) ->
     characters = $scope.getChars()
