@@ -4,7 +4,11 @@
 
 @import "bootstrap";
 
-a.btn {
+a.btn, .btn {
 	background: #428bca; 
 	color: white;
+}
+
+#logout-btn {
+  margin-top: 8px;
 }

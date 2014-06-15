@@ -13,7 +13,7 @@
 #= require_tree ./directives/main
 
 
-TypingTrainer = angular.module('TypingTrainer', ['ngRoute'])
+TypingTrainer = angular.module('TypingTrainer', ['ngRoute', 'Devise'])
 
 
 TypingTrainer.config(['$routeProvider', ($routeProvider) -> 
