@@ -16,4 +16,4 @@
 //= require bootstrap-min
 //= require angular
 //= require angular-route
-//= require game-play
+// = require gameplay
