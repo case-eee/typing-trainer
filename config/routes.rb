@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   resources :languages, only: [:index]
 
+  resources :scripts, only: [:index]
+
+
   get '/lessons/:track_name', :to => 'lessons#index' 
-  get '/scripts/:lesson_id', :to => 'scripts#index' 
+  #get '/scripts/:lesson_id', :to => 'scripts#index' 
   get '/:script_id/gameplay', :to => 'scripts#show'
 
   # The priority is based upon order of creation: first created -> highest priority.

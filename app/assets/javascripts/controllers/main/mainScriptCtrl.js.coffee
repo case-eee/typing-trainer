@@ -1,20 +1,26 @@
-@ScriptsCtrl = ($scope, $location, $http, $routeParams) ->
-	$scope.scripts = [{text: "Loading..."}]
+@ScriptsCtrl = ($scope, $location, $http, $routeParams, scriptData, $q) ->
 
-	lessonId = $routeParams.lessonId
+  $scope.scripts =
+    scriptData: scriptData.data
+    currentScripts: [{ text: 'Loading...' }]
 
-	getScripts = ->
-		data = $routeParams
-		$http.get('./scripts/' + lessonId + '.json', data).success( (data) ->
-			$scope.scripts = data
-			console.log('Successfully loaded scripts.')
-		).error( ->
-			console.error('Failed to load scripts.')
-		)
 
-	$scope.selectScript = (script) ->
-		$location.url(script + '/gameplay')
+  $scope.lessonId = $routeParams.lessonId
 
-	getScripts()
+  $scope.prepLessonScripts = ->
+    console.log(scriptData.data.scripts)
+    console.log($scope.lessonId)
+    scripts = _.where(scriptData.data.scripts, { lesson_id: parseInt($scope.lessonId) })
+    console.log(scripts)
+    $scope.scripts.currentScripts = scripts
 
-@ScriptsCtrl.$inject = ['$scope', '$location', '$http', '$routeParams']
+# $scope.selectScript = (script) ->
+# 	$location.url(script + '/gameplay')
+
+  @deferred = $q.defer()  
+  @deferred.promise.then($scope.prepLessonScripts)
+
+# Provide deferred promise chain to the loadPosts function
+  scriptData.getScripts(@deferred)
+
+@ScriptsCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', 'scriptData', '$q']
