@@ -1,10 +1,13 @@
 @GamePlayCtrl = ($scope, $location, $http, $routeParams, $q, scriptData) ->
 
+
+
   tempChars = "var awesomeness = function(){alert('AWESOME')};"
   $scope.tempChars2 = tempChars.split ""
 
 
-
+  $scope.$on "my:keypress", (event, keyEvent) ->
+    $scope.listen(keyEvent)
 
 
   $scope.restart = (scriptId) ->
