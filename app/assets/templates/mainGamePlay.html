@@ -5,16 +5,13 @@
 	<div class="row" id="game" >
     <pre>
 	    <code>
-	    <div ng-keypress="listen($event)">
-	    	<span></span>
-	    	<span ng-repeat="char in tempChars2 track by $index" >{{char}}</span>
-	    	</div>
+		    	<span ng-repeat="char in tempChars2 track by $index" >{{char}}</span>
 	    </code>
     </pre>
 
 		<p id="stats">This many incorrect:<span id="incorrect"></span></p>
 		
-		<a ng-click="restart(script.id)">Restart</a>
+		<a ng-click="restart(script.currentScript.id)">Restart</a>
 		<a ng-click="listen()">Listen</a>
 	</div>
 </div>

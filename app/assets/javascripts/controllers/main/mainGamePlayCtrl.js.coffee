@@ -1,6 +1,11 @@
 @GamePlayCtrl = ($scope, $location, $http, $routeParams, $q, scriptData) ->
-
-
+  $scope.typos = 0
+  $scope.counter = 0
+  $scope.totalKeypress = 0
+  $scope.startTime = new Date()
+  $scope.endTime
+  $scope.CPS
+  totalChars = tempChars.length
 
   tempChars = "var awesomeness = function(){alert('AWESOME')};"
   $scope.tempChars2 = tempChars.split ""
@@ -9,18 +14,6 @@
   $scope.$on "my:keypress", (event, keyEvent) ->
     $scope.listen(keyEvent)
 
-
-  $scope.restart = (scriptId) ->
-    console.log(scriptId)
-    $location.url(scriptId + '/gameplay')
-
-  $scope.typos = 0
-  $scope.counter = 0
-  $scope.totalKeypress = 0
-  $scope.startTime = new Date()
-  $scope.endTime
-  $scope.CPS
-  totalChars = tempChars.length
 
   moveCursor = ->
     # true
@@ -32,8 +25,25 @@
 
   $scope.updateIncorrect = ->
     $scope.typos++
-    $("#incorrect").html($scope.typos)
 
+  $scope.script =
+    currentScript:
+      text: 'Loading...'
+      id: ''
+
+  $scope.scriptId = $routeParams.scriptId
+
+  $scope.prepScriptData = ->
+    script = _.findWhere(scriptData.data.scripts, { id: parseInt($scope.scriptId) })
+    $scope.script.currentScript.text = script.text
+    $scope.script.currentScript.id = script.id
+
+  # Create promise to be resolved after posts load
+  @deferred = $q.defer()
+  @deferred.promise.then($scope.prepScriptData)
+
+  # Provide deferred promise chain to the loadPosts function
+  scriptData.getScripts(@deferred)
 
   $scope.addClassTyped = ->
     $("code span:nth-child("+$scope.counter+")").removeClass('untyped')
@@ -72,4 +82,8 @@
       $scope.newCheck( String.fromCharCode(event.which) );      
       $scope.isComplete()
 
-@GamePlayCtrl.$inject = ['$scope','$location', '$routeParams', '$http', '$q', 'scriptData']
+  $scope.restart = (scriptId) ->
+    console.log(scriptId)
+    $location.url('/gameplay/' + scriptId)
+
+@GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData']

@@ -2,21 +2,21 @@ angular.module('TypingTrainer').factory('scriptData', ['$http', ($http) ->
 
   scriptData =
     data:
-      text: [{text: 'Loading'}]
+      scripts: [{text: 'Loading'}]
     isLoaded: false
 
   scriptData.getScripts = (deferred) ->
     if !scriptData.isLoaded
-      $http.get('./' + scriptId + '/gameplay').success( (data) ->
-        scriptData.data.text = data
+      $http.get('./scripts.json').success( (data) ->
+        scriptData.data.scripts = data
         scriptData.isLoaded = true
-        console.log('Successfully loaded text.')
+        console.log('Successfully loaded all scripts.')
         if deferred
           deferred.resolve()
       ).error( ->
-        console.error('Failed to load text.')
+        console.error('Failed to load all scripts.')
         if deferred
-          deferred.reject('Failed to load text.')
+          deferred.reject('Failed to load all scripts.')
       )
     else
       if deferred

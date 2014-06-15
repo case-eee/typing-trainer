@@ -3,7 +3,7 @@ class ScriptsController < ApplicationController
 
 	def index
 		p params
-		scripts = Lesson.find(params[:lesson_id]).scripts
+		scripts = Script.all
 
 		render :json => scripts.to_json
 	end
