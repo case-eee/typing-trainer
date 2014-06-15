@@ -32,12 +32,27 @@
 # --Game Play ------------------------
 
   $scope.sendData = ->
+    # Create data object to POST
+    completionData =
+      new_performance:
+        number_missed: $scope.typos
+        total_characters: $scope.charList.length
+        time_elapsed: ( ($scope.endTime - $scope.startTime)/1000 )
+        wpm: ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000))
+    # Do POST request to /posts.json
+    $http.post('./performances.json', completionData).success( (data) ->
+      console.log("Successfully sent data.")
+    ).error( ->
+      console.error('Failed to create new post.')
+    )
+    
+    # Log the data
     console.log("Total Keypress: " + $scope.totalKeypress)
     console.log("Total $scope.charList.length: " + $scope.charList.length)
     console.log("$scope.typos:" + $scope.typos)
     console.log("Total time: " + (($scope.endTime - $scope.startTime)/1000))
     console.log("Total $scope.CPS(chars per second): " + ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000)))
-
+ # ----------------------------------------------
   markBGRed = ->
     $(".cursor").css("color", "red")
 
