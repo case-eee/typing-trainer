@@ -1,7 +1,6 @@
 @ScriptsCtrl = ($scope, $location, $http, $routeParams, scriptData, $q) ->
 
   $scope.scripts =
-    scriptData: scriptData.data
     currentScripts: [{ text: 'Loading...' }]
 
 
@@ -14,8 +13,8 @@
     console.log(scripts)
     $scope.scripts.currentScripts = scripts
 
-# $scope.selectScript = (script) ->
-# 	$location.url(script + '/gameplay')
+  $scope.selectScript = (script) ->
+    $location.url('/gameplay/' + script)
 
   @deferred = $q.defer()  
   @deferred.promise.then($scope.prepLessonScripts)
