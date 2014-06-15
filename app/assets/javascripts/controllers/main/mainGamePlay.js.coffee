@@ -1,11 +1,24 @@
-@GamePlayCtrl = ($scope) ->
-  
-  $scope.restart = ->
-    $location.url('/gameplay')
+@GamePlayCtrl = ($scope, $location, $http, $routeParams) ->
+  $scope.script = [{text: "Loading..."}]
 
+  scriptId = $routeParams.scriptId
 
+  getScript = ->
+    data = $routeParams
+    $http.get('./' + scriptId + '/gameplay', data).success( (data) ->
+      $scope.script = data
+      console.log('Successfully loaded current script')
+    ).error( ->
+      console.error('Failed to load current script')
+    )
 
-@GamePlayCtrl.$inject = ['$scope']
+  $scope.restart = (scriptId) ->
+    console.log(scriptId)
+    $location.url(scriptId + '/gameplay')
+
+  getScript()
+
+@GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams']
 
 
   # $scope.data =

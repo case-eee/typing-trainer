@@ -13,7 +13,7 @@
 		)
 
 	$scope.selectScript = (script) ->
-		$location.url('/gameplay')
+		$location.url(script + '/gameplay')
 
 	getScripts()
 
