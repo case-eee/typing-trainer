@@ -1,23 +1,30 @@
-@GamePlayCtrl = ($scope, $location, $http, $routeParams) ->
+@GamePlayCtrl = ($scope, $location, $http, $routeParams, $q, scriptData) ->
 
-  $scope.script = [{text: "Loading..."}]
+  $scope.data =
+    scriptData: scriptData.data
+    currentScript:
+      text: 'Loading...'
 
-  scriptId = $routeParams.scriptId
+  $scope.data.scriptId = $routeParams.scriptId
 
-  getScript = ->
-    data = $routeParams
-    $http.get('./' + scriptId + '/gameplay', data).success( (data) ->
-      $scope.script = data
-      console.log('Successfully loaded current script')
-    ).error( ->
-      console.error('Failed to load current script')
-    )
+  $scope.prepScriptData = ->
+    script = _.findWhere(scriptData.data.scripts, { id: parseInt($scope.data.scriptId) })
+    $scope.data.currentScript.text = script.text
 
+  # Create promise to be resolved after posts load
+  @deferred = $q.defer()
+  @deferred.promise.then($scope.prepScriptData)
+
+  # Provide deferred promise chain to the loadPosts function
+  scriptData.loadScripts(@deferred)
+
+
+
+# ---------------------------------------
   $scope.restart = (scriptId) ->
     console.log(scriptId)
     $location.url(scriptId + '/gameplay')
 
-  getScript()
 
   $scope.alert = ->
     alert("Alerted")
@@ -29,13 +36,14 @@
   $scope.startTime = new Date()
   $scope.endTime
   $scope.CPS
+  $scope.chars
 
-  $scope.moveCursor = ->
+  moveCursor = ->
     # true
     $("code span:nth-child("+$scope.counter+")").removeClass('cursor')
     $("code span:nth-child("+($scope.counter + 1)+")").addClass('cursor')
 
-  $scope.markBGRed = ->
+  markBGRed = ->
     $(".cursor").css("color", "red")
 
   $scope.updateIncorrect = ->
@@ -62,22 +70,18 @@
   #   console.log("Total $scope.CPS(chars per second): " + ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000)))
 
   $scope.getChars = ->
-    chars = [];
-    for i in [0..$("code span").length] by 1
-      e = $("code span")[i]
-      chars.push(e.innerHTML)
-      chars
+    $scope.chars = $scope.script.text.split ""
+    console.log("The chars are: " + chars)
 
-  $scope.
 
   $scope.newCheck = (keypress) ->
     characters = $scope.getChars()
     if keypress == characters[$scope.counter]
       $scope.counter++
       $scope.addClassTyped()
-      $scope.moveCursor()
+      moveCursor()
     else
-      $scope.markBGRed()
+      markBGRed()
       $scope.updateIncorrect()
 
   $scope.listen = ->
@@ -86,8 +90,7 @@
       event.preventDefault()
       $scope.totalChars = $("code span").length;
       $scope.totalKeypress++;
-      $scope.moveCursor();
       $scope.newCheck( String.fromCharCode(event.which) );      
       $scope.isComplete()
 
-@GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams']
+@GamePlayCtrl.$inject = ['$scope','$location', '$routeParams', '$http', '$q', 'scriptData']
