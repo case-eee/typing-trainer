@@ -3,11 +3,11 @@
 <div class="container" style="margin-top: 40px">
 	<h1 class="text-center">Get Ready to Play</h1>
 	<div class="row" id="game" >
-		<p> {{ script }}</p>
+		<p> {{ script.text }}</p>
 
 		<p id="stats">This many incorrect:<span id="incorrect"></span></p>
 		
-		<a ng-click="restart">Restart</a>
+		<a ng-click="restart(script.id)">Restart</a>
 
 	</div>
 </div>

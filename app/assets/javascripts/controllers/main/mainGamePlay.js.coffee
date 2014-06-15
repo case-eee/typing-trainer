@@ -7,14 +7,14 @@
     data = $routeParams
     $http.get('./' + scriptId + '/gameplay', data).success( (data) ->
       $scope.script = data
-      console.log($scope.script)
       console.log('Successfully loaded current script')
     ).error( ->
       console.error('Failed to load current script')
     )
 
-  $scope.restart = ->
-    $location.url('/gameplay')
+  $scope.restart = (scriptId) ->
+    console.log(scriptId)
+    $location.url(scriptId + '/gameplay')
 
   getScript()
 

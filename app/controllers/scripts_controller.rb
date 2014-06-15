@@ -10,7 +10,7 @@ class ScriptsController < ApplicationController
 
 	def show
 		p params
-		current_script = Script.find(params[:script_id]).text
+		current_script = Script.find(params[:script_id])
 
 		render :json => current_script.to_json
 	end
