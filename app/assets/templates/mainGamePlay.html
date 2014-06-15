@@ -3,17 +3,17 @@
 <div class="container" style="margin-top: 40px">
 	<h1 class="text-center">Get Ready to Play</h1>
 	<div class="row" id="game" >
-	  <pre style="overflow:auto">
-	    <code ng-repeat="car in script">
-	    	<span ngClass="{true:'isTyped', false:'untyped'}[isTyped]">{{char}}</span>
-			<p> {{ script }}</p>
+    <pre>
+	    <code>
+	    <div ng-keypress="listen($event)">
+	    	<span ng-repeat="char in tempChars2 track by $index" >{{char}}</span>
+	    	</div>
 	    </code>
-	  </pre>
+    </pre>
 
 		<p id="stats">This many incorrect:<span id="incorrect"></span></p>
 		
 		<a ng-click="restart(script.id)">Restart</a>
 		<a ng-click="listen()">Listen</a>
-		<a ng-click="alert()">Alert</a>
 	</div>
 </div>

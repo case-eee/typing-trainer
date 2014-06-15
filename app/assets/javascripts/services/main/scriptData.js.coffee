@@ -8,7 +8,7 @@ angular.module('TypingTrainer').factory('scriptData', ['$http', ($http) ->
   scriptData.getScripts = (deferred) ->
     if !scriptData.isLoaded
       $http.get('./' + scriptId + '/gameplay').success( (data) ->
-      	scriptData.data.text = data
+        scriptData.data.text = data
         scriptData.isLoaded = true
         console.log('Successfully loaded text.')
         if deferred
