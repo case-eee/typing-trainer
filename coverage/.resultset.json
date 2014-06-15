@@ -1,12 +1,43 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/casey/Documents/angular_awesomeness/blog/app/models/language.rb": [
+      "/Users/Gus/Desktop/typing-trainer/app/controllers/languages_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/Gus/Desktop/typing-trainer/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/Gus/Desktop/typing-trainer/spec/models/language_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/Gus/Desktop/typing-trainer/app/models/language.rb": [
         1,
         1,
         null
       ],
-      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/lesson_spec.rb": [
+      "/Users/Gus/Desktop/typing-trainer/spec/models/lesson_spec.rb": [
         1,
         null,
         1,
@@ -22,67 +53,22 @@
         null,
         null
       ],
-      "/Users/casey/Documents/angular_awesomeness/blog/app/models/lesson.rb": [
+      "/Users/Gus/Desktop/typing-trainer/app/models/lesson.rb": [
         1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/performance_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        null
-      ],
-      "/Users/casey/Documents/angular_awesomeness/blog/app/models/performance.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/script_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        null
-      ],
-      "/Users/casey/Documents/angular_awesomeness/blog/app/models/script.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/track_spec.rb": [
+      "/Users/Gus/Desktop/typing-trainer/spec/models/performance_spec.rb": [
         1,
         null,
         1,
         1,
+        2,
+        2,
+        2,
+        2,
         2,
         2,
         null,
@@ -94,13 +80,13 @@
         null,
         null
       ],
-      "/Users/casey/Documents/angular_awesomeness/blog/app/models/track.rb": [
+      "/Users/Gus/Desktop/typing-trainer/app/models/performance.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/casey/Documents/angular_awesomeness/blog/spec/models/user_spec.rb": [
+      "/Users/Gus/Desktop/typing-trainer/spec/models/script_spec.rb": [
         1,
         null,
         1,
@@ -111,21 +97,59 @@
         null,
         null,
         1,
-        2,
         2,
         2,
         null,
         null,
         null
       ],
-      "/Users/casey/Documents/angular_awesomeness/blog/app/models/user.rb": [
+      "/Users/Gus/Desktop/typing-trainer/app/models/script.rb": [
         1,
         1,
         1,
+        null
+      ],
+      "/Users/Gus/Desktop/typing-trainer/spec/models/track_spec.rb": [
         1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/Gus/Desktop/typing-trainer/app/models/track.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Gus/Desktop/typing-trainer/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1402700115
+    "timestamp": 1402796305
   }
 }
