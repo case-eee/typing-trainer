@@ -1,5 +1,23 @@
-@GamePlayCtrl = ($scope, $location) ->
+@GamePlayCtrl = ($scope, $location, $http, $routeParams) ->
 
+  $scope.script = [{text: "Loading..."}]
+
+  scriptId = $routeParams.scriptId
+
+  getScript = ->
+    data = $routeParams
+    $http.get('./' + scriptId + '/gameplay', data).success( (data) ->
+      $scope.script = data
+      console.log('Successfully loaded current script')
+    ).error( ->
+      console.error('Failed to load current script')
+    )
+
+  $scope.restart = (scriptId) ->
+    console.log(scriptId)
+    $location.url(scriptId + '/gameplay')
+
+  getScript()
 
   $scope.alert = ->
     alert("Alerted")
@@ -69,7 +87,4 @@
       $scope.newCheck( String.fromCharCode(event.which) );      
       $scope.isComplete()
 
-  $scope.restart = ->
-    $location.url('/gameplay')
-
-@GamePlayCtrl.$inject = ['$scope', '$location']
+@GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams']
