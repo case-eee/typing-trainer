@@ -17,4 +17,3 @@
 //= require angular
 //= require angular-route
 //= require devise
-// = require gameplay

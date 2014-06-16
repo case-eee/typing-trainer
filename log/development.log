@@ -1,0 +1,250 @@
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (17.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140613192523)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613192523"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLessons (20140613192537)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "lessons" ("id" serial primary key, "difficulty_level" integer, "language_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613192537"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLanguages (20140613193642)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "languages" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613193642"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScripts (20140613193710)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "scripts" ("id" serial primary key, "text" character varying(255), "lesson_id" integer, "sub_difficulty" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613193710"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePerformances (20140613193723)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.6ms)[0m  [1mCREATE TABLE "performances" ("id" serial primary key, "number_missed" integer, "total_characters" integer, "time_elapsed" time, "wpm" float, "script_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613193723"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTracks (20140613195200)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.4ms)[0m  [1mCREATE TABLE "tracks" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613195200"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddDeviseToUsers (20140615012535)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (8.9ms)[0m  [1mALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (12.4ms)[0m  ALTER TABLE "users" ADD COLUMN "encrypted_password" character varying(255) DEFAULT '' NOT NULL
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "reset_password_token" character varying(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "reset_password_sent_at" timestamp
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "remember_created_at" timestamp[0m
+  [1m[35m (8.2ms)[0m  ALTER TABLE "users" ADD COLUMN "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "current_sign_in_at" timestamp[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "last_sign_in_at" timestamp
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "current_sign_in_ip" character varying(255)[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD COLUMN "last_sign_in_ip" character varying(255)
+  [1m[36m (4.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140615012535"]]
+  [1m[35m (3.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mLanguage Load (0.9ms)[0m  SELECT "languages".* FROM "languages"
+  [1m[36mLesson Load (0.8ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  [1m[35mScript Load (0.9ms)[0m  SELECT "scripts".* FROM "scripts"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "languages" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.028632"], ["name", "JavaScript"], ["updated_at", "2014-06-16 21:37:59.028632"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "languages" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.037329"], ["name", "Ruby"], ["updated_at", "2014-06-16 21:37:59.037329"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "languages" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.041749"], ["name", "Python"], ["updated_at", "2014-06-16 21:37:59.041749"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.063471"], ["difficulty_level", 1], ["language_id", 1], ["updated_at", "2014-06-16 21:37:59.063471"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.069535"], ["difficulty_level", 2], ["language_id", 1], ["updated_at", "2014-06-16 21:37:59.069535"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.074503"], ["difficulty_level", 1], ["language_id", 2], ["updated_at", "2014-06-16 21:37:59.074503"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.080918"], ["difficulty_level", 2], ["language_id", 2], ["updated_at", "2014-06-16 21:37:59.080918"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.087379"], ["difficulty_level", 1], ["language_id", 3], ["updated_at", "2014-06-16 21:37:59.087379"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.090951"], ["difficulty_level", 2], ["language_id", 3], ["updated_at", "2014-06-16 21:37:59.090951"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.114205"], ["lesson_id", 1], ["sub_difficulty", 1], ["text", "$(document).ready(function () { });"], ["updated_at", "2014-06-16 21:37:59.114205"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.119434"], ["lesson_id", 1], ["sub_difficulty", 2], ["text", "function Item(name, price) {this.name = name; this.price = price;}"], ["updated_at", "2014-06-16 21:37:59.119434"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.122974"], ["lesson_id", 1], ["sub_difficulty", 3], ["text", "var list = [] $('#store_list tr.item').each(function(){var name = $(this).find('.item_name') });"], ["updated_at", "2014-06-16 21:37:59.122974"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.126303"], ["lesson_id", 1], ["sub_difficulty", 4], ["text", "var newItem = new Item() newItem['name'] = list[i].name;"], ["updated_at", "2014-06-16 21:37:59.126303"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.129666"], ["lesson_id", 1], ["sub_difficulty", 5], ["text", "StoreList.prototype.getItems = function() {for (var i = 0; i < list.length; i ++)"], ["updated_at", "2014-06-16 21:37:59.129666"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.133036"], ["lesson_id", 1], ["sub_difficulty", 6], ["text", "var price = $(this).find('.item_price') list.push({name: name[0].innerHTML, price: price[0].innerHTML})"], ["updated_at", "2014-06-16 21:37:59.133036"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.138122"], ["lesson_id", 2], ["sub_difficulty", 1], ["text", "$.post(\"/ajax\", data, function(returnValue)"], ["updated_at", "2014-06-16 21:37:59.138122"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.143571"], ["lesson_id", 2], ["sub_difficulty", 2], ["text", "console.log(returnValue);"], ["updated_at", "2014-06-16 21:37:59.143571"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.147484"], ["lesson_id", 2], ["sub_difficulty", 3], ["text", "var data = window.location.pathname.substr(1);"], ["updated_at", "2014-06-16 21:37:59.147484"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.150401"], ["lesson_id", 2], ["sub_difficulty", 4], ["text", "$('#ajax_page').ready(function(){})"], ["updated_at", "2014-06-16 21:37:59.150401"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.153276"], ["lesson_id", 2], ["sub_difficulty", 5], ["text", "$.post(url, data, function(response){ $('#partial').html(response);});"], ["updated_at", "2014-06-16 21:37:59.153276"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.157064"], ["lesson_id", 2], ["sub_difficulty", 6], ["text", "var data = $('input[type='radio']:checked').data();"], ["updated_at", "2014-06-16 21:37:59.157064"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.161660"], ["lesson_id", 3], ["sub_difficulty", 1], ["text", "attr_reader :style_name, :inventory, :shoe, :color"], ["updated_at", "2014-06-16 21:37:59.161660"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.166348"], ["lesson_id", 3], ["sub_difficulty", 2], ["text", "@inventory.each { |key, value| sum += value }"], ["updated_at", "2014-06-16 21:37:59.166348"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.170918"], ["lesson_id", 3], ["sub_difficulty", 3], ["text", "shoes[0].inventory['white'] > shoes[0].inventory['black']"], ["updated_at", "2014-06-16 21:37:59.170918"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.176020"], ["lesson_id", 3], ["sub_difficulty", 4], ["text", "first_column_items(shoes)[1].style_name == 'd'"], ["updated_at", "2014-06-16 21:37:59.176020"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-16 21:37:59.180936"], ["lesson_id", 3], ["sub_difficulty", 5], ["text", "this_recipe = @all_recipes.select { |row| row.id.to_i == recipe_id.to_i }"], ["updated_at", "2014-06-16 21:37:59.180936"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "scripts" ("created_at", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-16 21:37:59.186485"], ["lesson_id", 3], ["sub_difficulty", 6], ["text", "array_of_shoes.each_with_index { |style, index| first_column.push(style) if index % 3 == 0 }"], ["updated_at", "2014-06-16 21:37:59.186485"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-16 16:38:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 873ms (Views: 864.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/devise.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:12 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-16 16:38:13 -0500
+Processing by ScriptsController#index as JSON
+  [1m[35mScript Load (0.7ms)[0m  SELECT "scripts".* FROM "scripts"
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-16 16:38:31 -0500
+Processing by PerformancesController#create as JSON
+  Parameters: {"new_performance"=>{"number_missed"=>0, "total_characters"=>35, "time_elapsed"=>"1970-01-01T00:00:18.431Z", "wpm"=>1.8989745537409797, "script_id"=>"1"}, "performance"=>{}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "performances" ("created_at", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-06-16 21:38:31.839410"], ["number_missed", 0], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:18.000000"], ["total_characters", 35], ["updated_at", "2014-06-16 21:38:31.839410"], ["wpm", 1.8989745537409797]]
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 10.1ms)
