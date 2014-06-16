@@ -33,23 +33,11 @@ ActiveRecord::Schema.define(version: 20140615012535) do
     t.integer  "number_missed"
     t.integer  "total_characters"
     t.time     "time_elapsed"
-    t.integer  "wpm"
+    t.float    "wpm"
     t.integer  "script_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts_tags", id: false, force: true do |t|
-    t.integer "post_id"
-    t.integer "tag_id"
   end
 
   create_table "scripts", force: true do |t|
@@ -58,12 +46,6 @@ ActiveRecord::Schema.define(version: 20140615012535) do
     t.integer  "sub_difficulty"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "tags", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "tracks", force: true do |t|
