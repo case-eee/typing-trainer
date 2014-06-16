@@ -16,4 +16,6 @@
 //= require bootstrap-min
 //= require angular
 //= require angular-route
+//= require devise
 // = require gameplay
+

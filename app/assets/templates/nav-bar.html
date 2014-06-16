@@ -1,8 +1,33 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <a href="/" class="brand">Home</a>
-    <ul class="nav pull-right">
-      <li><a ng-click="navNewPost()">New Post</a></li>
+<div class="navbar navbar-inverse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li><a ng-click="/">Home</a></li>
     </ul>
+    <div class="pull-right">
+      <form name="signInForm" ng-hide="!isRegistered || isSignedIn " class="navbar-form form-parsley" ng-animate="'animate'">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control" ng-model="user.email" ng-animate="'animate'">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" ng-model="user.password" ng-animate="'animate'">
+        </div>
+        <button class="btn" ng-click="login(user)" ng-animate="'animate'">Log in</button>
+        <button class="btn" ng-click="isRegistered = false" ng-animate="'animate'">Sign up</button>
+      </form>
+
+      <form name="registrationForm" ng-hide="isRegistered" class="navbar-form form-parsley">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control" ng-model="newUser.email">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" ng-model="newUser.password">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password Confirmation" class="form-control" ng-model="newUser.password_confirmation">
+        </div>
+        <button class="btn" ng-click="register(newUser)">Register</button>
+      </form>
+      <button class="btn" id="logout-btn" ng-show="isSignedIn" ng-click="logout()">Log out</button>
+    </div>
   </div>
 </div>
