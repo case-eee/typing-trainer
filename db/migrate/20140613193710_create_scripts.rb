@@ -4,6 +4,7 @@ class CreateScripts < ActiveRecord::Migration
     	t.string :text
     	t.integer :lesson_id
     	t.integer :sub_difficulty
+    	t.integer :average_cps
     	
       t.timestamps
     end

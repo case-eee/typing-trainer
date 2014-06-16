@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140613195200) do
     t.integer  "total_characters"
     t.time     "time_elapsed"
     t.float    "wpm"
+    t.string   "missed_characters"
     t.integer  "script_id"
     t.integer  "user_id"
     t.datetime "created_at"
@@ -53,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140613195200) do
     t.string   "text"
     t.integer  "lesson_id"
     t.integer  "sub_difficulty"
+    t.integer  "average_cps"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

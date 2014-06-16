@@ -16,6 +16,8 @@
 		<p>This many incorrect: <span>{{typos}}</span></p>		
 		<p>Total key presses: <span>{{totalKeypress}}</span></p>		
 		<p>Seconds Elapsed: <span>{{time_elapsed | date:'s.sss' }}</span></p>		
-		<p>Characters per Second: <span>{{cps | number:4 }}</span></p>		
+		<p>Characters per Second: <span>{{cps | number:4 }}</span></p>	
+		<p>You missed the <span>{{ mostMissedChar }} </span> character <span>{{ missedTimes}}</span> times :( </p>
+		<p>Practice more!!</p>	
 	</div>
 </div>
