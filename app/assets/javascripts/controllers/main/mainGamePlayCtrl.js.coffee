@@ -94,7 +94,7 @@
     else
       $scope.typos++
       markRed()
-      $scope.missedChars.push(characters[$scope.counter])
+      $scope.missedChars.push($scope.charList[$scope.counter])
 
   $scope.listen = (event) ->
     event.preventDefault()
