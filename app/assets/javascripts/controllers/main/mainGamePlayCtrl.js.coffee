@@ -43,6 +43,8 @@
         total_characters: $scope.charList.length
         time_elapsed: ( ($scope.endTime - $scope.startTime)/1000 )
         wpm: $scope.cps
+        script_id: $scope.scriptId
+        
     # Do POST request to /posts.json
     $http.post('./performances.json', completionData).success( (data) ->
       console.log("Successfully sent data.")

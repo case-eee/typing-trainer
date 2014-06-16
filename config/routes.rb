@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :scripts, only: [:index]
 
+  resources :performances, only: [:create]
 
   get '/lessons/:track_name', :to => 'lessons#index' 
   #get '/scripts/:lesson_id', :to => 'scripts#index' 
