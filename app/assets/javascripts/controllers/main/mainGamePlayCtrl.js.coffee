@@ -35,16 +35,16 @@
 
   $scope.sendData = ->
     $scope.cps = ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000))
-    $scope.time_elapsed = ( ($scope.endTime - $scope.startTime)/1000 )
+    $scope.time_elapsed = new Date( ($scope.endTime - $scope.startTime)/1000 )
     # Create data object to POST
     completionData =
       new_performance:
         number_missed: $scope.typos
         total_characters: $scope.charList.length
-        time_elapsed: ( ($scope.endTime - $scope.startTime)/1000 )
+        time_elapsed: $scope.time_elapsed
         wpm: $scope.cps
         script_id: $scope.scriptId
-        
+
     # Do POST request to /posts.json
     $http.post('./performances.json', completionData).success( (data) ->
       console.log("Successfully sent data.")
