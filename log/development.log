@@ -1,0 +1,1631 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 19:04:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1963ms (Views: 1929.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:42 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-15 19:04:43 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-15 19:04:44 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-15 19:04:44 -0500
+Processing by LanguagesController#index as JSON
+  [1m[35mLanguage Load (0.7ms)[0m  SELECT "languages".* FROM "languages"
+Completed 200 OK in 51ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-15 19:04:45 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-15 19:04:45 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[36mLanguage Load (1.2ms)[0m  [1mSELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1[0m
+  [1m[35mLesson Load (0.6ms)[0m  SELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1  [["language_id", 1]]
+Completed 200 OK in 109ms (Views: 0.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-15 19:04:46 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-15 19:04:46 -0500
+Processing by ScriptsController#index as JSON
+  [1m[36mScript Load (0.6ms)[0m  [1mSELECT "scripts".* FROM "scripts"[0m
+Completed 200 OK in 106ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 19:04:47 -0500
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-15 19:05:05 -0500
+Processing by PerformancesController#create as JSON
+  Parameters: {"new_performance"=>{"number_missed"=>1, "total_characters"=>35, "time_elapsed"=>18.417, "wpm"=>1.9547157517510994}, "performance"=>{}}
+Completed 500 Internal Server Error in 16ms
+
+ActionView::MissingTemplate (Missing template performances/create, application/create with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/casey/Documents/angular_awesomeness/blog/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-15 19:05:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:34 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:34 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:34 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:05:34 -0500
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 19:05:34 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-15 19:05:34 -0500
+Processing by ScriptsController#index as JSON
+  [1m[35mScript Load (0.5ms)[0m  SELECT "scripts".* FROM "scripts"
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-15 19:05:34 -0500
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-15 19:05:55 -0500
+Processing by PerformancesController#create as JSON
+  Parameters: {"new_performance"=>{"number_missed"=>5, "total_characters"=>35, "time_elapsed"=>21.592, "wpm"=>1.8525379770285293}, "performance"=>{}}
+Completed 500 Internal Server Error in 2ms
+
+ActionView::MissingTemplate (Missing template performances/create, application/create with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/casey/Documents/angular_awesomeness/blog/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-15 19:13:04 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 19:13:04 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 707ms (Views: 705.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-15 19:13:05 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-15 19:13:06 -0500
+Processing by LanguagesController#index as JSON
+  [1m[36mLanguage Load (0.4ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-15 19:13:07 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-15 19:13:07 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-15 19:13:08 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-15 19:13:08 -0500
+Processing by ScriptsController#index as JSON
+  [1m[35mScript Load (0.4ms)[0m  SELECT "scripts".* FROM "scripts"
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 19:13:10 -0500
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-15 19:13:28 -0500
+
+SyntaxError (/Users/casey/Documents/angular_awesomeness/blog/app/controllers/performances_controller.rb:9: syntax error, unexpected tLABEL, expecting keyword_end
+				render :json => new_performance.to_json status: 200
+				                                               ^):
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `block in load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:633:in `new_constants_in'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:442:in `load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:342:in `require_or_load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:480:in `load_missing_constant'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 19:15:07 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-15 19:15:08 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-15 19:15:09 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-15 19:15:09 -0500
+Processing by LanguagesController#index as JSON
+  [1m[36mLanguage Load (0.4ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-15 19:15:10 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-15 19:15:10 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[35mLanguage Load (1.0ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
+Completed 200 OK in 32ms (Views: 0.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-15 19:15:11 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-15 19:15:11 -0500
+Processing by ScriptsController#index as JSON
+  [1m[35mScript Load (0.4ms)[0m  SELECT "scripts".* FROM "scripts"
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 19:15:12 -0500
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-15 19:15:32 -0500
+
+SyntaxError (/Users/casey/Documents/angular_awesomeness/blog/app/controllers/performances_controller.rb:9: syntax error, unexpected tLABEL, expecting keyword_end
+				render :json => new_performance.to_json status: 200
+				                                               ^
+/Users/casey/Documents/angular_awesomeness/blog/app/controllers/performances_controller.rb:12: syntax error, unexpected tLABEL, expecting keyword_end
+				render :json => new_performance.to_json status: 200
+				                                               ^):
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `block in load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:633:in `new_constants_in'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:442:in `load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:342:in `require_or_load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:480:in `load_missing_constant'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (60.4ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (81.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:16:22 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-15 19:16:23 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-15 19:16:23 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-15 19:16:23 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-15 19:16:23 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-15 19:16:23 -0500
+Processing by LanguagesController#index as JSON
+  [1m[36mLanguage Load (0.4ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-15 19:16:24 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-15 19:16:24 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-15 19:16:24 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-15 19:16:24 -0500
+Processing by ScriptsController#index as JSON
+  [1m[35mScript Load (0.5ms)[0m  SELECT "scripts".* FROM "scripts"
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 19:16:25 -0500
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-15 19:16:40 -0500
+
+SyntaxError (/Users/casey/Documents/angular_awesomeness/blog/app/controllers/performances_controller.rb:9: syntax error, unexpected tLABEL, expecting keyword_end
+				render :json => new_performance.to_json status: 200
+				                                               ^
+/Users/casey/Documents/angular_awesomeness/blog/app/controllers/performances_controller.rb:12: syntax error, unexpected tLABEL, expecting keyword_end
+				render :json => new_performance.to_json status: 200
+				                                               ^):
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:443:in `block in load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:633:in `new_constants_in'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:442:in `load_file'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:342:in `require_or_load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:480:in `load_missing_constant'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/casey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-15 19:18:01 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-15 19:18:02 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-15 19:18:03 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-15 19:18:03 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-15 19:18:03 -0500
+Processing by LanguagesController#index as JSON
+  [1m[36mLanguage Load (0.8ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-15 19:18:04 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-15 19:18:04 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[35mLanguage Load (0.4ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
+Completed 200 OK in 83ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-15 19:18:05 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-15 19:18:05 -0500
+Processing by ScriptsController#index as JSON
+  [1m[35mScript Load (0.7ms)[0m  SELECT "scripts".* FROM "scripts"
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 19:18:05 -0500
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-15 19:18:18 -0500
+Processing by PerformancesController#create as JSON
+  Parameters: {"new_performance"=>{"number_missed"=>1, "total_characters"=>35, "time_elapsed"=>12.556, "wpm"=>2.8671551449506216, "script_id"=>"1"}, "performance"=>{}}
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `user_signed_in?' for #<PerformancesController:0x00000101412308>):
+  app/controllers/performances_controller.rb:6:in `create'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 76ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/gameplay.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainPlayCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/directives/main/empty.js?body=1" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2014-06-15 19:19:56 -0500
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2014-06-15 19:19:57 -0500
+
+
+Started GET "/assets/mainTracks.html" for 127.0.0.1 at 2014-06-15 19:19:59 -0500
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2014-06-15 19:19:59 -0500
+Processing by LanguagesController#index as JSON
+  [1m[36mLanguage Load (0.5ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+Completed 200 OK in 83ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/mainLessons.html" for 127.0.0.1 at 2014-06-15 19:20:00 -0500
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2014-06-15 19:20:00 -0500
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.4ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
+Completed 200 OK in 32ms (Views: 0.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/mainScripts.html" for 127.0.0.1 at 2014-06-15 19:20:01 -0500
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2014-06-15 19:20:01 -0500
+Processing by ScriptsController#index as JSON
+  [1m[35mScript Load (0.6ms)[0m  SELECT "scripts".* FROM "scripts"
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 19:20:01 -0500
+
+
+Started POST "/performances.json" for 127.0.0.1 at 2014-06-15 19:20:27 -0500
+Processing by PerformancesController#create as JSON
+  Parameters: {"new_performance"=>{"number_missed"=>1, "total_characters"=>35, "time_elapsed"=>16.64, "wpm"=>2.1634615384615383, "script_id"=>"1"}, "performance"=>{}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (43.1ms)[0m  INSERT INTO "performances" ("created_at", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-06-16 00:20:27.904299"], ["number_missed", 1], ["script_id", 1], ["time_elapsed", 16.64], ["total_characters", 35], ["updated_at", "2014-06-16 00:20:27.904299"], ["wpm", 2]]
+PG::InvalidDatetimeFormat: ERROR:  invalid input syntax for type time: "16.64"
+: INSERT INTO "performances" ("created_at", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 144ms
+
+ActiveRecord::StatementInvalid (PG::InvalidDatetimeFormat: ERROR:  invalid input syntax for type time: "16.64"
+: INSERT INTO "performances" ("created_at", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"):
+  app/controllers/performances_controller.rb:10:in `create'
+
+
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.7ms)
