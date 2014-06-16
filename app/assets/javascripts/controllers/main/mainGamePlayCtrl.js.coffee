@@ -1,6 +1,4 @@
 @GamePlayCtrl = ($scope, $location, $http, $routeParams, $q, scriptData) ->
-  $scope.$on "my:keypress", (event, keyEvent) ->
-    $scope.listen(keyEvent)
 
   $scope.typos = 0
   $scope.counter = 0
@@ -23,7 +21,7 @@
     script = _.findWhere(scriptData.data.scripts, { id: parseInt($scope.scriptId) })
     $scope.script.currentScript.text = script.text
     $scope.script.currentScript.id = script.id
-
+    $scope.charList = $scope.script.currentScript.text.split ""
   # Create promise to be resolved after posts load
   @deferred = $q.defer()
   @deferred.promise.then($scope.prepScriptData)
@@ -64,19 +62,25 @@
     $(".cursor").css("color", "red")
 
   moveCursor = ->
-    $("code span:nth-child("+$scope.counter+")").removeClass('cursor')
-    $("code span:nth-child("+($scope.counter + 1)+")").addClass('cursor')
+    if $scope.counter == 0
+      $("code span:first").removeClass('cursor')
+    else
+      $("code span:nth-child("+$scope.counter+")").removeClass('cursor')
+    $("code span:nth-child("+($scope.counter+1)+")").addClass('cursor')
 
-  $scope.getChars = ->
-    $scope.charList = $scope.script.currentScript.text.split ""
+  # $scope.getChars = ->
+  #   $scope.charList = $scope.script.currentScript.text.split ""
 
   $scope.restart = (scriptId) ->
     console.log(scriptId)
     $location.url('/gameplay/' + scriptId)
 
   $scope.addClassTyped = ->
-    $("code span:nth-child("+$scope.counter+")").removeClass('untyped')
-    $("code span:nth-child("+$scope.counter+")").addClass('typed')
+    if $scope.counter == 0
+      $("code span:first").removeClass('untyped')
+    else
+      $("code span:nth-child("+$scope.counter+")").removeClass('untyped')
+    $("code span:nth-child("+$scope.counter+1+")").addClass('typed')
 
   $scope.isComplete = ->
     if $scope.counter == $scope.charList.length
@@ -84,8 +88,7 @@
       $scope.sendData()
     
   $scope.newCheck = (keypress) ->
-    characters = $scope.getChars()
-    if keypress == characters[$scope.counter]
+    if keypress == $scope.charList[$scope.counter]
       $scope.counter++
       $scope.addClassTyped()
       moveCursor()
@@ -98,5 +101,8 @@
     $scope.totalKeypress++;
     $scope.newCheck( String.fromCharCode(event.which) );      
     $scope.isComplete()
+
+  $scope.$on "my:keypress", (event, keyEvent) ->
+    $scope.listen(keyEvent)
 
 @GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData']
