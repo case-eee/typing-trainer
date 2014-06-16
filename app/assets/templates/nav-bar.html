@@ -4,15 +4,15 @@
       <li><a ng-click="/">Home</a></li>
     </ul>
     <div class="pull-right">
-      <form name="signInForm" ng-hide="!isRegistered || isSignedIn " class="navbar-form form-parsley">
+      <form name="signInForm" ng-hide="!isRegistered || isSignedIn " class="navbar-form form-parsley" ng-animate="'animate'">
         <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control" ng-model="user.email">
+          <input type="text" placeholder="Email" class="form-control" ng-model="user.email" ng-animate="'animate'">
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control" ng-model="user.password">
+          <input type="password" placeholder="Password" class="form-control" ng-model="user.password" ng-animate="'animate'">
         </div>
-        <button class="btn" ng-click="login(user)">Log in</button>
-        <button class="btn" ng-click="isRegistered = false">Sign up</button>
+        <button class="btn" ng-click="login(user)" ng-animate="'animate'">Log in</button>
+        <button class="btn" ng-click="isRegistered = false" ng-animate="'animate'">Sign up</button>
       </form>
 
       <form name="registrationForm" ng-hide="isRegistered" class="navbar-form form-parsley">
