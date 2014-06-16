@@ -7,8 +7,10 @@
   $scope.totalKeypress = 0
   $scope.startTime = new Date()
   $scope.endTime
+  $scope.time_elapsed
   $scope.CPS
   $scope.charList
+  $scope.finished = false
 
   $scope.script =
     currentScript:
@@ -32,13 +34,15 @@
 # --Game Play ------------------------
 
   $scope.sendData = ->
+    $scope.cps = ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000))
+    $scope.time_elapsed = ( ($scope.endTime - $scope.startTime)/1000 )
     # Create data object to POST
     completionData =
       new_performance:
         number_missed: $scope.typos
         total_characters: $scope.charList.length
         time_elapsed: ( ($scope.endTime - $scope.startTime)/1000 )
-        wpm: ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000))
+        wpm: $scope.cps
     # Do POST request to /posts.json
     $http.post('./performances.json', completionData).success( (data) ->
       console.log("Successfully sent data.")
@@ -47,6 +51,7 @@
     )
     
     # Log the data
+    $scope.finished = true
     console.log("Total Keypress: " + $scope.totalKeypress)
     console.log("Total $scope.charList.length: " + $scope.charList.length)
     console.log("$scope.typos:" + $scope.typos)
@@ -73,7 +78,6 @@
 
   $scope.isComplete = ->
     if $scope.counter == $scope.charList.length
-      alert("Send Data to Rails")
       $scope.endTime = new Date()
       $scope.sendData()
     
@@ -88,9 +92,9 @@
       $scope.typos++
 
   $scope.listen = (event) ->
-    # $(document).on "keypress", (event) -> 
-      $scope.totalKeypress++;
-      $scope.newCheck( String.fromCharCode(event.which) );      
-      $scope.isComplete()
+    event.preventDefault()
+    $scope.totalKeypress++;
+    $scope.newCheck( String.fromCharCode(event.which) );      
+    $scope.isComplete()
 
 @GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData']
