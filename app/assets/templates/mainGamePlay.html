@@ -9,12 +9,13 @@
 	    </code>
     </pre>		
 		<a ng-click="restart(script.currentScript.id)">Restart</a>
+		<a ng-click="restart(script.currentScript.id + 1)">Next</a>
 	</div>
 
 	<div ng-show="finished" class="goods">
 		<p>This many incorrect: <span>{{typos}}</span></p>		
 		<p>Total key presses: <span>{{totalKeypress}}</span></p>		
 		<p>Seconds Elapsed: <span>{{time_elapsed | date:'s.sss' }}</span></p>		
-		<p>Characters per Second: <span>{{cps | number }}</span></p>		
+		<p>Characters per Second: <span>{{cps | number:4 }}</span></p>		
 	</div>
 </div>
