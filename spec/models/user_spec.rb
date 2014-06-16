@@ -2,9 +2,8 @@ require 'spec_helper'
 
 describe User do
 	 describe "Migration" do
-  	it { should have_db_column(:username)}
   	it { should have_db_column(:email)}
-  	it { should have_db_column(:password)}
+  	it { should have_db_column(:encrypted_password)}
   end
 
   describe "Association" do
