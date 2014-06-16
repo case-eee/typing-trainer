@@ -17,21 +17,21 @@
 
   $scope.scriptId = $routeParams.scriptId
 
-  $scope.prepScriptData = ->
+  prepScriptData = ->
     script = _.findWhere(scriptData.data.scripts, { id: parseInt($scope.scriptId) })
     $scope.script.currentScript.text = script.text
     $scope.script.currentScript.id = script.id
     $scope.charList = $scope.script.currentScript.text.split ""
   # Create promise to be resolved after posts load
   @deferred = $q.defer()
-  @deferred.promise.then($scope.prepScriptData)
+  @deferred.promise.then(prepScriptData)
 
   # Provide deferred promise chain to the loadPosts function
   scriptData.getScripts(@deferred)
 
 # --Game Play ------------------------
 
-  $scope.sendData = ->
+  sendData = ->
     $scope.cps = ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000))
     $scope.time_elapsed = new Date( ($scope.endTime - $scope.startTime) )
     # Create data object to POST
@@ -58,15 +58,15 @@
     console.log("Total time: " + $scope.time_elapsed)
     console.log("Total $scope.CPS(chars per second): " + $scope.cps)
 
-  markBGRed = ->
+  markRed = ->
     $(".cursor").css("color", "red")
 
   moveCursor = ->
     if $scope.counter == 0
-      $("code span:first").removeClass('cursor')
+      $("code span:first").removeClass('cursor untyped')
     else
-      $("code span:nth-child("+$scope.counter+")").removeClass('cursor')
-    $("code span:nth-child("+($scope.counter+1)+")").addClass('cursor')
+      $("code span:nth-child("+$scope.counter+")").removeClass('untyped cursor')
+    $("code span:nth-child("+($scope.counter+1)+")").addClass('cursor typed')
 
   # $scope.getChars = ->
   #   $scope.charList = $scope.script.currentScript.text.split ""
@@ -75,34 +75,27 @@
     console.log(scriptId)
     $location.url('/gameplay/' + scriptId)
 
-  $scope.addClassTyped = ->
-    if $scope.counter == 0
-      $("code span:first").removeClass('untyped')
-    else
-      $("code span:nth-child("+$scope.counter+")").removeClass('untyped')
-    $("code span:nth-child("+$scope.counter+1+")").addClass('typed')
-
-  $scope.isComplete = ->
+  isComplete = ->
     if $scope.counter == $scope.charList.length
       $scope.endTime = new Date()
-      $scope.sendData()
+      sendData()
     
-  $scope.newCheck = (keypress) ->
+  newCheck = (keypress) ->
     if keypress == $scope.charList[$scope.counter]
       $scope.counter++
-      $scope.addClassTyped()
       moveCursor()
     else
-      markBGRed()
       $scope.typos++
+      markRed()
 
   $scope.listen = (event) ->
     event.preventDefault()
     $scope.totalKeypress++;
-    $scope.newCheck( String.fromCharCode(event.which) );      
-    $scope.isComplete()
+    newCheck( String.fromCharCode(event.which) );      
+    isComplete()
 
-  $scope.$on "my:keypress", (event, keyEvent) ->
-    $scope.listen(keyEvent)
+  $scope.start = ->
+    $scope.$on "my:keypress", (event, keyEvent) ->
+      $scope.listen(keyEvent)
 
 @GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData']
