@@ -95,6 +95,8 @@
     isComplete()
 
   $scope.start = ->
+    $("code span:first").addClass('cursor')
+    $('button').hide()
     $scope.$on "my:keypress", (event, keyEvent) ->
       $scope.listen(keyEvent)
 
