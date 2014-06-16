@@ -6,6 +6,7 @@
 	getLessons = ->
 		data = $routeParams
 		$http.get('./lessons/' + trackName + '.json', data).success( (data) ->
+			console.log(data)
 			$scope.lessons = data
 			console.log('Successfully loaded lessons.')
 		).error( ->
