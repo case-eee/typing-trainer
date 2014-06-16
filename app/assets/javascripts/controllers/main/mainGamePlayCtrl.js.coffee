@@ -1,4 +1,4 @@
-@GamePlayCtrl = ($scope, $location, $http, $routeParams, $q, scriptData) ->
+@GamePlayCtrl = ($scope, $location, $http, $routeParams, $q, scriptData, $route) ->
 
   $scope.typos = 0
   $scope.counter = 0
@@ -80,7 +80,7 @@
 
   $scope.restart = (scriptId) ->
     console.log(scriptId)
-    $location.url('/gameplay/' + scriptId)
+    $route.reload()
 
   isComplete = ->
     if $scope.counter == $scope.charList.length
@@ -108,4 +108,4 @@
     $scope.$on "my:keypress", (event, keyEvent) ->
       $scope.listen(keyEvent)
 
-@GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData']
+@GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData', '$route']
