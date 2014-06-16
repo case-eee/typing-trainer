@@ -3,6 +3,7 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
     templateUrl:'/assets/nav-bar.html',
     controller: ($scope) ->
       $scope.isSignedIn = Auth.isAuthenticated()
+      console.log('isSignedIn:' + $scope.isSignedIn)
       $scope.isRegistered = true
 
       $scope.login = (user) ->
@@ -17,9 +18,15 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
 
 
       $scope.logout = ->
-        Auth.logout()
-        $scope.isSignedIn = false
-
+        Auth.logout().then( (oldUser) ->
+          $scope.isSignedIn = Auth.isAuthenticated()
+          console.log($scope.isSignedIn)
+          console.log('logged out')
+          $location.url('/')
+        , (error) ->
+          console.log(error)
+        )
+            
       $scope.register = (user) ->
         Auth.register(user).then((registeredUser) ->
           console.log('registered')

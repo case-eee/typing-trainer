@@ -8,7 +8,10 @@
   $scope.time_elapsed
   $scope.CPS
   $scope.charList
+  $scope.missedChars = []
   $scope.finished = false
+  $scope.mostMissedChar
+  $scope.missedTimes
 
   $scope.script =
     currentScript:
@@ -42,9 +45,12 @@
         time_elapsed: $scope.time_elapsed
         wpm: $scope.cps
         script_id: $scope.scriptId
+        missed_characters: $scope.missedChars.toString()
 
     # Do POST request to /posts.json
     $http.post('./performances.json', completionData).success( (data) ->
+      $scope.mostMissedChar = data.character.toString()
+      $scope.missedTimes = data.times.toString()
       console.log("Successfully sent data.")
     ).error( ->
       console.error('Failed to create new post.')
@@ -57,6 +63,7 @@
     console.log("$scope.typos:" + $scope.typos)
     console.log("Total time: " + $scope.time_elapsed)
     console.log("Total $scope.CPS(chars per second): " + $scope.cps)
+    console.log("Missed characters: " + $scope.missedChars)
 
   markRed = ->
     $(".cursor").css("color", "red")
@@ -87,6 +94,7 @@
     else
       $scope.typos++
       markRed()
+      $scope.missedChars.push(characters[$scope.counter])
 
   $scope.listen = (event) ->
     event.preventDefault()
