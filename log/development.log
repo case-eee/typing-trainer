@@ -3795,3 +3795,5 @@ Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 2.2ms)
 
 
 Started GET "/assets/mainGamePlay.html" for 127.0.0.1 at 2014-06-15 22:44:33 -0500
+  [1m[36mLanguage Load (0.7ms)[0m  [1mSELECT "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'[0m
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'
