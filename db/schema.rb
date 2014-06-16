@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140613195200) do
     t.integer  "number_missed"
     t.integer  "total_characters"
     t.time     "time_elapsed"
-    t.integer  "wpm"
+    t.float    "wpm"
     t.integer  "script_id"
     t.integer  "user_id"
     t.datetime "created_at"
