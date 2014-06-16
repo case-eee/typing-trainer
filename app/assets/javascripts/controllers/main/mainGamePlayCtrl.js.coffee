@@ -35,7 +35,7 @@
 
   $scope.sendData = ->
     $scope.cps = ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000))
-    $scope.time_elapsed = new Date( ($scope.endTime - $scope.startTime)/1000 )
+    $scope.time_elapsed = new Date( ($scope.endTime - $scope.startTime) )
     # Create data object to POST
     completionData =
       new_performance:
@@ -57,9 +57,9 @@
     console.log("Total Keypress: " + $scope.totalKeypress)
     console.log("Total $scope.charList.length: " + $scope.charList.length)
     console.log("$scope.typos:" + $scope.typos)
-    console.log("Total time: " + (($scope.endTime - $scope.startTime)/1000))
-    console.log("Total $scope.CPS(chars per second): " + ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000)))
- # ----------------------------------------------
+    console.log("Total time: " + $scope.time_elapsed)
+    console.log("Total $scope.CPS(chars per second): " + $scope.cps)
+
   markBGRed = ->
     $(".cursor").css("color", "red")
 
