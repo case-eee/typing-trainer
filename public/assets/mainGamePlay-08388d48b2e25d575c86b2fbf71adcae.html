@@ -1,0 +1,20 @@
+<nav-bar></nav-bar>
+
+<div class="container" style="margin-top: 40px">
+	<h1 class="text-center">Get Ready to Play</h1>
+	<div class="row" id="game" >
+    <pre>
+	    <code>
+		    	<span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span>
+	    </code>
+    </pre>		
+		<a ng-click="restart(script.currentScript.id)">Restart</a>
+	</div>
+
+	<div ng-show="finished" class="goods">
+		<p>This many incorrect: <span>{{typos}}</span></p>		
+		<p>Total key presses: <span>{{totalKeypress}}</span></p>		
+		<p>Seconds Elapsed: <span>{{time_elapsed | date:'s.sss' }}</span></p>		
+		<p>Characters per Second: <span>{{cps | number }}</span></p>		
+	</div>
+</div>
