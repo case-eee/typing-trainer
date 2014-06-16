@@ -1630,3 +1630,6 @@ ActiveRecord::StatementInvalid (PG::InvalidDatetimeFormat: ERROR:  invalid input
   Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /Users/casey/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.7ms)
   [1m[36mPerformance Load (0.9ms)[0m  [1mSELECT "performances".* FROM "performances"[0m
+  [1m[36mLesson Load (39.9ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (26.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
