@@ -8,4 +8,5 @@ describe Language do
   describe "Association" do
   	it { should have_many(:lessons) }
   end
+
 end

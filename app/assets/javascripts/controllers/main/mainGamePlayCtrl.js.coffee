@@ -1,75 +1,102 @@
-@GamePlayCtrl = ($scope, $location) ->
-
-
-  $scope.alert = ->
-    alert("Alerted")
+@GamePlayCtrl = ($scope, $location, $http, $routeParams, $q, scriptData) ->
+  $scope.$on "my:keypress", (event, keyEvent) ->
+    $scope.listen(keyEvent)
 
   $scope.typos = 0
   $scope.counter = 0
-  $scope.totalChars # = $("code span").length;
   $scope.totalKeypress = 0
   $scope.startTime = new Date()
   $scope.endTime
+  $scope.time_elapsed
   $scope.CPS
+  $scope.charList
+  $scope.finished = false
 
-  $scope.moveCursor = ->
+  $scope.script =
+    currentScript:
+      text: 'Loading...'
+      id: ''
+
+  $scope.scriptId = $routeParams.scriptId
+
+  $scope.prepScriptData = ->
+    script = _.findWhere(scriptData.data.scripts, { id: parseInt($scope.scriptId) })
+    $scope.script.currentScript.text = script.text
+    $scope.script.currentScript.id = script.id
+
+  # Create promise to be resolved after posts load
+  @deferred = $q.defer()
+  @deferred.promise.then($scope.prepScriptData)
+
+  # Provide deferred promise chain to the loadPosts function
+  scriptData.getScripts(@deferred)
+
+# --Game Play ------------------------
+
+  $scope.sendData = ->
+    $scope.cps = ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000))
+    $scope.time_elapsed = new Date( ($scope.endTime - $scope.startTime)/1000 )
+    # Create data object to POST
+    completionData =
+      new_performance:
+        number_missed: $scope.typos
+        total_characters: $scope.charList.length
+        time_elapsed: $scope.time_elapsed
+        wpm: $scope.cps
+        script_id: $scope.scriptId
+
+    # Do POST request to /posts.json
+    $http.post('./performances.json', completionData).success( (data) ->
+      console.log("Successfully sent data.")
+    ).error( ->
+      console.error('Failed to create new post.')
+    )
+    
+    # Log the data
+    $scope.finished = true
+    console.log("Total Keypress: " + $scope.totalKeypress)
+    console.log("Total $scope.charList.length: " + $scope.charList.length)
+    console.log("$scope.typos:" + $scope.typos)
+    console.log("Total time: " + (($scope.endTime - $scope.startTime)/1000))
+    console.log("Total $scope.CPS(chars per second): " + ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000)))
+ # ----------------------------------------------
+  markBGRed = ->
+    $(".cursor").css("color", "red")
+
+  moveCursor = ->
     $("code span:nth-child("+$scope.counter+")").removeClass('cursor')
     $("code span:nth-child("+($scope.counter + 1)+")").addClass('cursor')
 
-  $scope.markBGRed = ->
-    $(".cursor").css("color", "red")
+  $scope.getChars = ->
+    $scope.charList = $scope.script.currentScript.text.split ""
 
-  $scope.updateIncorrect = ->
-    $scope.typos++
-    $("#incorrect").html($scope.typos)
-
+  $scope.restart = (scriptId) ->
+    console.log(scriptId)
+    $location.url('/gameplay/' + scriptId)
 
   $scope.addClassTyped = ->
     $("code span:nth-child("+$scope.counter+")").removeClass('untyped')
     $("code span:nth-child("+$scope.counter+")").addClass('typed')
 
   $scope.isComplete = ->
-    if $scope.counter == $scope.totalChars
-      $(document).off('keypress')
-      alert("Send Data to Rails")
+    if $scope.counter == $scope.charList.length
       $scope.endTime = new Date()
       $scope.sendData()
-
-  @scope.sendData = ->
-    console.log("Total Keypress: " + $scope.totalKeypress)
-    console.log("Total totalChars: " + $scope.totalChars)
-    console.log("$scope.typos:" + $scope.typos)
-    console.log("Total time: " + (($scope.endTime - $scope.startTime)/1000))
-    console.log("Total $scope.CPS(chars per second): " + ($scope.totalKeypress / (($scope.endTime - $scope.startTime)/1000)))
-
-  $scope.getChars = ->
-    chars = [];
-    for i in [0..$("code span").length] by 1
-      e = $("code span")[i]
-      chars.push(e.innerHTML)
-      chars
-
+    
   $scope.newCheck = (keypress) ->
     characters = $scope.getChars()
     if keypress == characters[$scope.counter]
       $scope.counter++
       $scope.addClassTyped()
-      $scope.moveCursor()
+      moveCursor()
     else
-      $scope.markBGRed()
-      $scope.updateIncorrect()
+      markBGRed()
+      $scope.typos++
 
-  $scope.listen = ->
-    alert("Listening")
-    $(document).on "keypress", (event) -> 
-      event.preventDefault()
-      $scope.totalChars = $("code span").length;
-      $scope.totalKeypress++;
-      $scope.moveCursor();
-      $scope.newCheck( String.fromCharCode(event.which) );      
-      $scope.isComplete()
+  $scope.listen = (event) ->
+    event.preventDefault()
+    $scope.totalKeypress++;
+    $scope.newCheck( String.fromCharCode(event.which) );      
+    $scope.isComplete()
 
-  $scope.restart = ->
-    $location.url('/gameplay')
-
-@GamePlayCtrl.$inject = ['$scope', '$location']
+@GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData']

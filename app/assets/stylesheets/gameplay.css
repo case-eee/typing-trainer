@@ -10,7 +10,7 @@ pre code {
 }
 
 .typed {
-	color: green;
+	color: black;
 }
 
 .cursor {
@@ -18,5 +18,15 @@ pre code {
 }
 
 .untyped {
-	color: #888888;
+	color: #A4A4A4;
+}
+
+.goods {
+  text-align: center;
+  color: green;
+}
+
+.goods span {
+  font-size: 16px;
+  font-weight: bold
 }
