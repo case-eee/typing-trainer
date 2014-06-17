@@ -3,7 +3,7 @@
   $scope.typos = 0
   $scope.counter = 0
   $scope.totalKeypress = 0
-  $scope.startTime = new Date()
+  $scope.startTime 
   $scope.endTime
   $scope.time_elapsed
   $scope.CPS
@@ -103,6 +103,7 @@
     isComplete()
 
   $scope.start = ->
+    $scope.startTime = new Date()
     $("code span:first").addClass('cursor')
     $('button').hide()
     $scope.unbdindBroadcast = $scope.$on "my:keypress", (event, keyEvent) ->
