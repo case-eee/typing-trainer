@@ -1,10 +1,10 @@
 <nav-bar></nav-bar>
 
-<div class="container" style="margin-top: 40px">
+<div class="container" style="margin-top: 40px" >™
   <h1 class="text-center">Must type everything correctly</h1>
   <div class="row" id="game">
-    <div id="timer" class="center" ng-controller="timerCtrl">{{counter/100 | number:2}}</div>
-    <ng-timer></ng-timer>
+    <div id="timer" ng-if="startTime && !endTime" ng-init="startTimer()" ng-controller="timerCtrl" class="center">{{counter/100 | number:2}}</div>
+    
     <pre>
       <code>
         <span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span>
