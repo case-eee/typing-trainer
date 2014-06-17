@@ -61,12 +61,6 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
         
         # Log the data
         $scope.finished = true
-        console.log("Total Keypress: " + $scope.totalKeypress)
-        console.log("Total $scope.charList.length: " + $scope.charList.length)
-        console.log("$scope.typos:" + $scope.typos)
-        console.log("Total time: " + $scope.time_elapsed)
-        console.log("Total $scope.CPS(chars per second): " + $scope.cps)
-        console.log("Missed characters: " + $scope.missedChars)
 
       markRed = ->
         $(".cursor").css("color", "red")
