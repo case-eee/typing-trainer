@@ -25,6 +25,7 @@ TypingTrainer.config(['$routeProvider', ($routeProvider) ->
     .when('/post/new', { templateUrl: '../assets/mainCreatePost.html', controller: 'CreatePostCtrl' })
     .when('/post/:postId', { templateUrl: '../assets/mainPost.html', controller: 'PostCtrl' })
     .when('/gameplay/:scriptId', {templateUrl: '../assets/mainGamePlay.html', controller: 'GamePlayCtrl'} )
+    .when('/profile', {templateUrl: '../assets/mainProfile.html', controller: 'ProfileCtrl'} )
 
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrl'} )
 ])
