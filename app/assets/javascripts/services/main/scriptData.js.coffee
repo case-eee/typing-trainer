@@ -23,5 +23,6 @@ angular.module('TypingTrainer').factory('scriptData', ['$http', ($http) ->
         deferred.resolve()
 
   return scriptData
+
   
 ])
