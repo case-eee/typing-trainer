@@ -99,7 +99,7 @@
 
   $scope.listen = (event) ->
     $scope.totalKeypress++
-    newCheck( String.fromCharCode(event.which) );      
+    newCheck( String.fromCharCode(event.which) )
     isComplete()
 
   $scope.start = ->
