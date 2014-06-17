@@ -1,4 +1,5 @@
 pre code {
+  text-align: center;
   display: block; padding: 0.5em;
   color: #333;
   background: #f8f8ff;
@@ -10,15 +11,15 @@ pre code {
 }
 
 .typed {
-	color: black;
+  color: black;
 }
 
 .cursor {
-	background-color: #B8B8B8;
+  background-color: #B8B8B8;
 }
 
 .untyped {
-	color: #A4A4A4;
+  color: #A4A4A4;
 }
 
 .goods {
@@ -30,3 +31,18 @@ pre code {
   font-size: 16px;
   font-weight: bold
 }
+
+#timer {
+  padding-top: 5px;
+  text-align: center;
+  width: 75px;
+  height: 50px;
+  background-color: darkgray;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10%;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+

@@ -5,6 +5,7 @@ class CreatePerformances < ActiveRecord::Migration
     	t.integer :total_characters
     	t.time :time_elapsed
     	t.float :wpm
+      t.string :missed_characters
     	t.integer :script_id
     	t.integer :user_id
 
