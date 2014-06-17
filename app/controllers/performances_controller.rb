@@ -1,6 +1,11 @@
 class PerformancesController < ApplicationController
 	respond_to :json
 
+	def index
+		puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Got PErformances"
+		render :json => current_user.performances.to_json
+	end
+
 	def create
 		if user_signed_in? 
 			new_performance = current_user.performances.new(performance_params)
@@ -22,6 +27,7 @@ class PerformancesController < ApplicationController
 			render :json => most_missed.to_json, status: 200
 		end
 	end
+
 
 	private
 

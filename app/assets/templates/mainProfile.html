@@ -1,0 +1,19 @@
+<nav-bar></nav-bar>
+
+<h1>{{user.email}}</h1>
+<table>
+	<tr>
+		<td>CPS</td>
+		<td>Missed</td>
+		<td>Time</td>
+	</tr>
+
+	<tr ng-repeat="performance in performances">
+		<td>{{performance.wpm}}</td>
+		<td>{{performance.missed_characters}}</td>
+		<td>{{performance.time_elapsed | date: 'm.ss.s'}}</td>
+	</tr>
+	
+
+
+</table

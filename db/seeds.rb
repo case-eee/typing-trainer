@@ -1,6 +1,12 @@
 Language.destroy_all
 Lesson.destroy_all
 Script.destroy_all
+User.destroy_all
+
+test = User.create!(email: "test@test.com", password: "password")
+mo = User.create!(email: "mo@test.com", password: "password")
+erik = User.create!(email: "erik@test.com", password: "password")
+
 
 js = Language.create!(name: 'JavaScript')
 ruby = Language.create!(name: 'Ruby')
@@ -35,3 +41,10 @@ tres.scripts.create!(text: "shoes[0].inventory['white'] > shoes[0].inventory['bl
 tres.scripts.create!(text: "first_column_items(shoes)[1].style_name == 'd'", sub_difficulty: 4, average_cps: 0)
 tres.scripts.create!(text: "this_recipe = @all_recipes.select { |row| row.id.to_i == recipe_id.to_i }", sub_difficulty: 5, average_cps: 0)
 tres.scripts.create!(text: "array_of_shoes.each_with_index { |style, index| first_column.push(style) if index % 3 == 0 }", sub_difficulty: 6, average_cps: 0)
+
+test.lessons << uno
+test.lessons << dos
+
+
+mo.lessons << uno
+mo.lessons << dos
