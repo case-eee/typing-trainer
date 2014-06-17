@@ -88,7 +88,7 @@
       $scope.endTime = new Date()
       sendData()
     
-  newCheck = (keypress) ->
+  checkKey = (keypress) ->
     if keypress == $scope.charList[$scope.counter]
       $scope.counter++
       moveCursor()
@@ -99,7 +99,7 @@
 
   $scope.listen = (event) ->
     $scope.totalKeypress++
-    newCheck( String.fromCharCode(event.which) )
+    checkKey( String.fromCharCode(event.which) )
     isComplete()
 
   $scope.start = ->
@@ -107,5 +107,6 @@
     $('button').hide()
     $scope.unbdindBroadcast = $scope.$on "my:keypress", (event, keyEvent) ->
         $scope.listen(keyEvent)
+
 
 @GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData', '$route']
