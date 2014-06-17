@@ -51,6 +51,8 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
           $scope.newUser.password_confirmation = ''
         )
 
+        $scope.home = ->
+          $location.url('../assets/mainIndex.html')
        
           
 )     
