@@ -12,6 +12,7 @@
   $scope.mostMissedChar
   $scope.missedTimes
   $scope.unbdindBroadcast
+  $scope.enterCall = false
 
   $scope.script =
     currentScript:
@@ -90,6 +91,8 @@
     
   checkKey = (keypress) ->
     if keypress == $scope.charList[$scope.counter]
+      if $scope.charList[$scope.counter] == "\n"
+        $scope.enterCall = false
       $scope.counter++
       moveCursor()
     else
@@ -97,9 +100,22 @@
       markRed()
       $scope.missedChars.push($scope.charList[$scope.counter])
 
+  # $scope.listen = (event) ->
+  #   $scope.totalKeypress++
+  #   checkKey( String.fromCharCode(event.which) )
+  #   isComplete()
+
+
   $scope.listen = (event) ->
     $scope.totalKeypress++
-    checkKey( String.fromCharCode(event.which) )
+    if $scope.charList[$scope.counter + 1] == "\n"
+      $scope.enterCall = true
+    event.preventDefault()
+    # debugger
+    if event.which == 13
+      checkKey( String.fromCharCode(10) )
+    else 
+      checkKey( String.fromCharCode(event.which || event.charCode || event.keyCode ) )
     isComplete()
 
   $scope.start = ->

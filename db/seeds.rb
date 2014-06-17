@@ -15,7 +15,7 @@ quatro = ruby.lessons.create!(difficulty_level: 2)
 cinco = python.lessons.create!(difficulty_level: 1)
 seis = python.lessons.create!(difficulty_level: 2)
 
-uno.scripts.create!(text: '$(document).ready(function () { });', sub_difficulty: 1, average_cps: 0)
+uno.scripts.create!(text: "$(document).ready(function () { });\n    function Item(name, price) {this.name = name; this.price = price;\nHellot there\n  Yes sir", sub_difficulty: 1, average_cps: 0)
 uno.scripts.create!(text: 'function Item(name, price) {this.name = name; this.price = price;}', sub_difficulty: 2, average_cps: 0)
 uno.scripts.create!(text: "var list = [] $('#store_list tr.item').each(function(){var name = $(this).find('.item_name') });", lesson_id: 1, sub_difficulty: 3, average_cps: 0)
 uno.scripts.create!(text: "var newItem = new Item() newItem['name'] = list[i].name;", sub_difficulty: 4, average_cps: 0)
