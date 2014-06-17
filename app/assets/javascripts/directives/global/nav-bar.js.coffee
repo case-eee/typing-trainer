@@ -5,15 +5,22 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
       $scope.isSignedIn = Auth.isAuthenticated()
       console.log('isSignedIn:' + $scope.isSignedIn)
       $scope.isRegistered = true
+      $scope.errors = null
 
       $scope.login = (user) ->
         Auth.login(user).then((user) ->
           console.log('logged in')
           $scope.isSignedIn = true
+        , (error) ->
+            console.log('ERROR')
+            console.log('error: ' + error)  
+        )
+       
+        $scope.$on('devise:unauthorized',(event, xhr, deferred) ->
+          console.log(event)
           $scope.user.email = ''
           $scope.user.password = ''
-        , (error) ->
-            console.log(error)   
+          $scope.errors = "Invalid email or password" 
         )
 
 
@@ -33,11 +40,16 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
           $scope.isRegistered = true
           $scope.isSignedIn = true
           $scope.newUser.email = ''
-          $scope.newUser.password = ''
-          $scope.newUser.password_confirmation = ''
         , (error) ->
             console.log(error)
-        )  
+            if error.data.errors.email
+              $scope.errors = "User already registered"
+            else if error.data.errors.password_confirmation
+              $scope.errors = "Passwords don't match"
+        ).finally( ->  
+          $scope.newUser.password = ''
+          $scope.newUser.password_confirmation = ''
+        )
 
        
           
