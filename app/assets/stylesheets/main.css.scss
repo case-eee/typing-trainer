@@ -13,6 +13,19 @@ a.btn, .btn {
   margin-top: 8px;
 }
 
+.error-msg {
+  margin-right: 6px;
+  color: #999;
+}
+
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+  border-color: #428bca;
+}
+
 .animate-enter, 
 .animate-leave
 { 
@@ -29,7 +42,7 @@ a.btn, .btn {
 .animate-leave {
     opacity: 1;
     left: 0;
-    height: 30px;
+    height: 30px; 
 }
 
 .animate-leave.animate-leave-active,
@@ -38,3 +51,9 @@ a.btn, .btn {
     left: -50px;
     height: 0px;
 }
+
+
+
+/*.ng-valid.ng-dirty {  
+  border-color: #78FA89; 
+}*/
