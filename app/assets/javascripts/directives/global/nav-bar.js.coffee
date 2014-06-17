@@ -39,6 +39,8 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
             console.log(error)
         )  
 
+        $scope.home = ->
+          $location.url('../assets/mainIndex.html')
        
           
 )     

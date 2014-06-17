@@ -1,0 +1,8 @@
+<div class="container" style="margin-top: 40px">
+  <ul ng-repeat='track in tracks'>
+    <li><a class='btn' ng-click="selectTrack(track.name)">{{ track.name }}</a></li>
+    <div ng-show='loadLessons'>
+      <show-lessons></show-lessons>
+    </div>
+  </ul>
+</div>
