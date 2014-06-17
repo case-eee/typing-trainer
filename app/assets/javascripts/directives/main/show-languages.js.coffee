@@ -15,7 +15,8 @@ showLanguages = angular.module('TypingTrainer').directive('showLanguages',($loca
       )
 
     $scope.selectTrack = (track) ->
-      $location.url('tracks/' + track)
+      console.log('we should be clicking the second button')
+      $scope.loadLessons = true
 
     $scope.play = ->
       console.log('we should be clicking the button')

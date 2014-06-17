@@ -5,13 +5,10 @@
 
  # postData.loadPosts(null)
 
- $scope.play = ->
+ play = ->
   console.log('we should be clicking the button')
   $scope.loadLanguages = true
   # $location.url('/tracks')
-
-  $scope.navNewPost = ->
-    $location.url('/post/new')
 
 
 @IndexCtrl.$inject = ['$scope', '$location', '$http', 'postData']
