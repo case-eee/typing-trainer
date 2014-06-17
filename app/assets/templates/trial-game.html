@@ -5,6 +5,5 @@
 		    	<span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span>
 	    </code>
     </pre>		
-		<a ng-click="restart(script.currentScript.id)">Restart</a>
-		<a ng-click="restart(script.currentScript.id + 1)">Next</a>
+      <button ng-click="start()" ng-hide="totalKeypress">Click Here To Start</button>
 	</div>
