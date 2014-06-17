@@ -13,11 +13,11 @@
     <a ng-click="restart(script.currentScript.id + 1)">Next</a>
   </div>
 
-  <div ng-show="finished" class="goods" style="box-shadow: 10px 10px 10px 10px #888888; margin: 20px;">
+  <div ng-show="endTime" class="goods" style="box-shadow: 10px 10px 10px 10px #888888; margin: 20px;">
     <p>This many incorrect: <span>{{typos}}</span></p>    
     <p>Total key presses: <span>{{totalKeypress}}</span></p>    
-    <p>Seconds Elapsed: <span>{{time_elapsed | date:'s.sss' }}</span></p>   
-    <p>Characters per Second: <span>{{cps | number:4 }}</span></p>    
+    <p>Seconds Elapsed: <span>{{time_elapsed | date:'s' }}</span></p>   
+    <p>Characters per Second: <span>{{cps | number:1 }}</span></p>    
 		<p>You missed the <span>"{{ mostMissedChar }}"</span> character <span>{{ missedTimes}}</span> times :( </p>
 		<p>Practice more!!!</p>	
   </div>

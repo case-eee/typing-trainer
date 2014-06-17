@@ -9,9 +9,9 @@
   $scope.CPS
   $scope.charList
   $scope.missedChars = []
-  $scope.finished = false
   $scope.mostMissedChar
   $scope.missedTimes
+  $scope.unbdindBroadcast
 
   $scope.script =
     currentScript:
@@ -52,12 +52,12 @@
       $scope.mostMissedChar = data.character.toString()
       $scope.missedTimes = data.times.toString()
       console.log("Successfully sent data.")
+      #dataSent = true
     ).error( ->
       console.error('Failed to create new post.')
     )
     
     # Log the data
-    $scope.finished = true
     console.log("Total Keypress: " + $scope.totalKeypress)
     console.log("Total $scope.charList.length: " + $scope.charList.length)
     console.log("$scope.typos:" + $scope.typos)
@@ -84,6 +84,7 @@
 
   isComplete = ->
     if $scope.counter == $scope.charList.length
+      $scope.unbdindBroadcast()
       $scope.endTime = new Date()
       sendData()
     
@@ -97,15 +98,14 @@
       $scope.missedChars.push($scope.charList[$scope.counter])
 
   $scope.listen = (event) ->
-    event.preventDefault()
-    $scope.totalKeypress++;
+    $scope.totalKeypress++
     newCheck( String.fromCharCode(event.which) );      
     isComplete()
 
   $scope.start = ->
     $("code span:first").addClass('cursor')
     $('button').hide()
-    $scope.$on "my:keypress", (event, keyEvent) ->
-      $scope.listen(keyEvent)
+    $scope.unbdindBroadcast = $scope.$on "my:keypress", (event, keyEvent) ->
+        $scope.listen(keyEvent)
 
 @GamePlayCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', '$q', 'scriptData', '$route']
