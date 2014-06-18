@@ -1,7 +1,7 @@
 @ProfileCtrl = ($scope, $location, $http, $q) ->
   $scope.user = {
-    name: "Mike"
     email: "test@test.com"
+    password: "password"
   }
 
   UserPerformancesLoaded = false
