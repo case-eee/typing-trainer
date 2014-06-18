@@ -15,3 +15,4 @@ function timerCtrl($scope, $timeout) {
 	}	
 
 }
+

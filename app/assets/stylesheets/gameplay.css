@@ -51,6 +51,10 @@ img {
   color: #A4A4A4;
 }
 
+.incorrect {
+  color: red;
+}
+
 .goods {
   text-align: center;
   color: green;

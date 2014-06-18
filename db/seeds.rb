@@ -1,6 +1,9 @@
+User.destroy_all
 Language.destroy_all
 Lesson.destroy_all
 Script.destroy_all
+
+testman = User.create!(email:"test@test.com", password:"password")
 
 js = Language.create!(name: 'JavaScript')
 ruby = Language.create!(name: 'Ruby')
@@ -32,7 +35,7 @@ objectivec_tres = objectivec.lessons.create!(title: "Lesson 3", difficulty_level
 objectivec_quatro = objectivec.lessons.create!(title: "Lesson 4", difficulty_level: 4)
 objectivec_cinco = objectivec.lessons.create!(title: "Lesson 5", difficulty_level: 5)
 
-js_uno.scripts.create!(instructions: "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!", text: "$(document).ready(function () { });\n    function Item(name, price) {this.name = name; this.price = price;\nHellot there\n  Yes sir", sub_difficulty: 1, average_cps: 0)
+js_uno.scripts.create!(instructions: "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!", text: "$(document).ready(function () { });\n    function Item(name, price) {this.name = name; this.price = price;\nHello there\n  Yes sir", sub_difficulty: 1, average_cps: 0)
 js_uno.scripts.create!(instructions: "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!", text: 'function Item(name, price) {this.name = name; this.price = price;}', sub_difficulty: 2, average_cps: 0)
 js_uno.scripts.create!(instructions: "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!", text: "var list = [] $('#store_list tr.item').each(function(){var name = $(this).find('.item_name') });", lesson_id: 1, sub_difficulty: 3, average_cps: 0)
 js_uno.scripts.create!(instructions: "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!", text: "var newItem = new Item() newItem['name'] = list[i].name;", sub_difficulty: 4, average_cps: 0)
@@ -60,9 +63,8 @@ ruby_dos.scripts.create!(instructions: "Practice your typing skills. Be sure to 
 ruby_dos.scripts.create!(instructions: "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below.", text: "attr_accessor :temperature, :timer, :done, :time_remaining", sub_difficulty: 5, average_cps: 0)
 ruby_dos.scripts.create!(instructions: "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below.", text: "class Sudoku \n   attr_writer :rows, :columns, :boxes \n   attr_accessor :complete, :choices", sub_difficulty: 6, average_cps: 0)
 
+Lesson.all.each {|l| testman.lessons << l}
 
-
-
-
-
-
+20.times do 
+	testman.performances.create!(number_missed: 12, total_characters: Random.rand(20..120), time_elapsed: "2000-01-01T00:00:42.000Z", wpm: Random.rand(6), missed_characters: "u,y,n,c,c,c,c,i,),;,i,t", script_id: uno.scripts.first.id)
+end

@@ -3,22 +3,25 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
   templateUrl: '/assets/trial-game.html',
   controller: ($scope, $location, $http, $routeParams, $q, scriptData, $route) ->
 
-    $scope.typos = 0
-    $scope.counter = 0
-    $scope.totalKeypress = 0
-    $scope.startTime 
-    $scope.endTime
-    $scope.time_elapsed
-    $scope.CPS
-    $scope.charList
-    $scope.missedChars = []
-    $scope.mostMissedChar
-    $scope.missedTimes
-    $scope.unbdindBroadcast
-    $scope.enterCall = false
-    $scope.scriptSelected = false
-    $scope.allCorrect = false
-    $scope.gameComplete = false
+    resetCounters = ->
+      $scope.typos = 0
+      $scope.counter = 0
+      $scope.totalKeypress = 0
+      $scope.startTime = null
+      $scope.endTime = 0
+      $scope.time_elapsed
+      $scope.CPS
+      $scope.charList
+      $scope.missedChars = []
+      $scope.mostMissedChar
+      $scope.missedTimes
+      $scope.unbindBroadcast
+      $scope.enterCall = false
+      $scope.scriptSelected = false
+      $scope.allCorrect = false
+      $scope.gameComplete = false
+
+    resetCounters()
 
     $scope.script =
       currentScript:
@@ -27,6 +30,9 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
         id: ''
 
     $scope.setScript = (script) ->
+      $scope.playedScript = script
+      nextScript(script)
+      console.log($scope.playedScript)
       console.log("call to setScript")
       $scope.scriptSelected = true
       $scope.script.currentScript.text = script.text
@@ -37,6 +43,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
     prepScriptData = ->
       random = Math.floor(Math.random() * scriptData.data.scripts.length)
       script = scriptData.data.scripts[random]
+      $scope.playedScript = script
       $scope.script.currentScript.text = script.text
       $scope.script.currentScript.id = script.id
       $scope.charList = $scope.script.currentScript.text.split ""
@@ -46,6 +53,11 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
 
     # Provide deferred promise chain to the loadPosts function
     scriptData.getScripts(@deferred)
+
+    nextScript = (script) ->
+      console.log("INDEX: " + $scope.scripts.indexOf(script))
+      currentScriptIndex = $scope.scripts.indexOf(script)
+      $scope.nextScript = $scope.scripts[currentScriptIndex + 1]
 
   # --Game Play ------------------------
 
@@ -83,7 +95,8 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
       console.log("Missed characters: " + $scope.missedChars)
 
     markRed = ->
-      $(".cursor").css("color", "red")
+      # $(".cursor").css("color", "red")
+      $(".cursor").addClass("incorrect")
 
     moveCursor = ->
       if $scope.counter == 0
@@ -98,16 +111,22 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
     $scope.restart = (script) ->
       # console.log(script)
       # console.log(script.join(''))
-      setScript(script.join(''))
+      $scope.unbindBroadcast()
+      $("code span").removeClass().addClass('untyped')
+      $('button').show()
+      resetCounters()
+      $scope.setScript(script)
 
     isComplete = ->
       if $scope.counter == $scope.charList.length
-        $scope.unbdindBroadcast()
+        $scope.unbindBroadcast()
         $scope.endTime = new Date()
         sendData()
         $scope.gameComplete = true
       
     checkKey = (keypress) ->
+      # debugger
+      console.log(keypress)
       if keypress == $scope.charList[$scope.counter]
         if $scope.charList[$scope.counter] == "\n"
           $scope.enterCall = false
@@ -139,7 +158,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
       $scope.startTime = new Date()
       $("code span:first").addClass('cursor')
       $('button').hide()
-      $scope.unbdindBroadcast = $scope.$on "my:keypress", (event, keyEvent) ->
+      $scope.unbindBroadcast = $scope.$on "my:keypress", (event, keyEvent) ->
           $scope.listen(keyEvent)
 
 )
