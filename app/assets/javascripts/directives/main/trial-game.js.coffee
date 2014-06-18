@@ -16,6 +16,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
     $scope.missedTimes
     $scope.unbdindBroadcast
     $scope.enterCall = false
+    $scope.scriptSelected = false
 
     $scope.script =
       currentScript:
@@ -24,6 +25,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
 
     $scope.setScript = (script) ->
       console.log("call to setScript")
+      $scope.scriptSelected = true
       $scope.script.currentScript.text = script.text
       $scope.script.currentScript.id = script.id
       $scope.charList = $scope.script.currentScript.text.split ""

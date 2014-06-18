@@ -70,7 +70,16 @@ ul {
   list-style-type: none;
 }
 
+#button {
+  font-size: 30px;
+  width: 200px !important;
+}
+
 .instructions {
+  text-align: center;
+}
+
+.diagram {
   text-align: center;
 }
 
@@ -85,5 +94,5 @@ ul {
 }
 
 .custom {
-  width: 85px !important;
+  width: 105px !important;
 }

@@ -1,6 +1,13 @@
 <div id='gameplay' class="col-md-6" >
-  <h1 class="text-center">Test your typying skills!</h1>
-  <h4 class='instructions'>Type the code below as accurately as you can.</h4>
+  <div ng-show="scriptSelected">
+    <h1 class="text-center">Test your typying skills!</h1>
+    <h4 class='instructions'> {{ script.currentScript.instructions }}</h4>
+  </div>
+  <div ng-hide="scriptSelected">
+    <h1>Try Key2Code now!</h1>
+    <h4 class="instructions">Type the code below as accurately as you can!</h4>
+  </div>
+  <div class='diagram'><p> DIAGRAM OF KEYBOARD WITH FINGERS IS GOING HERE!!!</p></div>
   <div class="row" id="game">
     <div id="timer" ng-if="startTime && !endTime" ng-init="startTimer()" ng-controller="timerCtrl" class="center">{{counter/100 | number:2}}</div>
     <p id="enterSign" ng-if="enterCall">Press Enter</p>

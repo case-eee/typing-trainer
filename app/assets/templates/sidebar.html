@@ -2,21 +2,21 @@
   <div ng-show="showLanguages">
     <h4>Select a language:</h4>
     <ul ng-repeat='language in languages'>
-      <li><a class='btn custom' ng-click="getLessons(language.name)">{{ language.name }}</a></li>
+      <li><a id="button" class='btn custom' ng-click="getLessons(language.name)">{{ language.name }}</a></li>
     </ul>
   </div>
   
   <div ng-show="showLessons">
     <h4>Select a lesson</h4>
     <ul ng-repeat='lesson in lessons' >
-      <li><a class='btn custom' ng-click="getScripts(lesson.id)">Lesson {{ lesson.id }}</a></li>
+      <li><a id="button" class='btn custom' ng-click="getScripts(lesson.id)">Lesson {{ lesson.title }}</a></li>
     </ul>
   </div>
 
   <div ng-show="showScripts">
     <h4>Select a script</h4>
     <ul ng-repeat='script in scripts'>
-      <li><a class='btn custom' ng-click="setScript(script)">Script {{script.id }}</a></li>
+      <li><a id="button" class='btn custom' ng-click="setScript(script)">Difficulty: {{ script.sub_difficulty }}</a></li>
     </ul>
   </div>
 
