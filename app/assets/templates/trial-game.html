@@ -1,13 +1,14 @@
 <div id='gameplay' class="col-md-6" >
   <div ng-show="scriptSelected">
-    <h1 class="text-center">Test your typying skills!</h1>
-    <h4 class='instructions'> {{ script.currentScript.instructions }}</h4>
+    <h1 class="text-center">Test your typing skills!</h1>
+    <h4 class='instructions'> Instructions: {{ script.currentScript.instructions }}</h4>
   </div>
   <div ng-hide="scriptSelected">
     <h1>Try Key2Code now!</h1>
     <h4 class="instructions">Type the code below as accurately as you can!</h4>
   </div>
-  <div class='diagram'><p> DIAGRAM OF KEYBOARD WITH FINGERS IS GOING HERE!!!</p></div>
+  <div class='diagram'><img src="/assets/keyboard2.jpg" alt='keydiagram'></div>
+  <br><br>
   <div class="row" id="game">
     <div id="timer" ng-if="startTime && !endTime" ng-init="startTimer()" ng-controller="timerCtrl" class="center">{{counter/100 | number:2}}</div>
     <p id="enterSign" ng-if="enterCall">Press Enter</p>
@@ -16,12 +17,11 @@
     </pre>
     <div class='start'>
       <button ng-click="start()" ng-hide="totalKeypress">Start Training</button>
+      <div ng-show='showScripts'>
+  	    <a ng-click="restart(charList)">Restart</a>
+  	    <a ng-click="restart(script.currentScript.id + 1)">Next Lesson</a>
+    	</div>
     </div>
-
-    <div ng-show='showScripts'>
-	    <a ng-click="restart(charList)">Restart</a>
-	    <a ng-click="restart(script.currentScript.id + 1)">Next Lesson</a>
-  	</div>
   </div>
 
 

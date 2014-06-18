@@ -9,7 +9,7 @@
   <div ng-show="showLessons">
     <h4>Select a lesson</h4>
     <ul ng-repeat='lesson in lessons' >
-      <li><a id="button" class='btn custom' ng-click="getScripts(lesson.id)">Lesson {{ lesson.title }}</a></li>
+      <li><a id="button" class='btn custom' ng-click="getScripts(lesson.id)">{{ lesson.title }}</a></li>
     </ul>
   </div>
 

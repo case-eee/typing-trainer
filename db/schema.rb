@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140615012535) do
   end
 
   create_table "lessons", force: true do |t|
+    t.string   "title"
     t.integer  "difficulty_level"
     t.integer  "language_id"
     t.datetime "created_at"
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140615012535) do
 
   create_table "scripts", force: true do |t|
     t.string   "text"
+    t.string   "instructions"
     t.integer  "lesson_id"
     t.integer  "sub_difficulty"
     t.integer  "average_cps"

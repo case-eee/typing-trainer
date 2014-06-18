@@ -21,12 +21,15 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
     $scope.script =
       currentScript:
         text: 'Loading...'
+        instructions: ''
         id: ''
 
     $scope.setScript = (script) ->
       console.log("call to setScript")
       $scope.scriptSelected = true
       $scope.script.currentScript.text = script.text
+      $scope.script.currentScript.instructions = script.instructions
+      console.log($scope.script.currentScript.instructions)
       $scope.script.currentScript.id = script.id
       $scope.charList = $scope.script.currentScript.text.split ""
 
@@ -56,7 +59,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
           time_elapsed: $scope.time_elapsed
           wpm: $scope.cps
           script_id: $scope.scriptId
-          missed_characters: $scope.missedChars.toString()
+          missed_characters: $scope.missedChars.toString() || 0
 
       # Do POST request to /posts.json
       $http.post('./performances.json', completionData).success( (data) ->

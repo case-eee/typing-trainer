@@ -11,13 +11,20 @@ pre code {
   background: none repeat scroll 0% 0% #F8F8FF;
 }
 
+#all {
+  /*background-color: green;*/
+}
 .typed {
   color: black;
 }
 
-#gameplay {
-  padding-right: 5em;
+img {
+  width: 70%;
+  height: auto;
+}
 
+#gameplay {
+  padding-right: 8em;
 }
 
 .start {
@@ -71,7 +78,7 @@ ul {
 }
 
 #button {
-  font-size: 30px;
+  font-size: 26px;
   width: 200px !important;
 }
 
@@ -84,7 +91,7 @@ ul {
 }
 
 #sidebar {
-  padding: none;
+  padding-left: 5em;
 }
 
 #enterSign {
