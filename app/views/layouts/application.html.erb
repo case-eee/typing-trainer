@@ -3,12 +3,17 @@
 <head>
   <title>Typing Trainer</title>
   <%= stylesheet_link_tag    'application', media: 'all'%>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
   <%= javascript_include_tag 'application', controller_name %>
   <%= javascript_include_tag 'main' %> 
   <%= csrf_meta_tags %>
+
+  <script src="dist/angularjs-nvd3-directives.js"></script>
+  <script src="../build/components/d3/d3.js"></script>
+  <script src="../build/components/nvd3/nv.d3.js"></script>
+  <link rel="stylesheet" href="path/to/nv.d3.css"/>
+
 </head>
-<body ng-keypress="$broadcast('my:keypress', $event)">
+	<body ng-keypress="$broadcast('my:keypress', $event)">
 
 <%= yield %>
 
