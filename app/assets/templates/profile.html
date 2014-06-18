@@ -7,14 +7,14 @@
 
 	<button ng-click="getChart()">GEt Chart Brah</button>
 
-<p ng-repeat="performance in user.performances">{{performance}}</p>
+<!-- <p ng-repeat="performance in user.performances">{{performance}}</p> -->
 
 <div>
 	<nvd3-scatter-chart
             data="exampleData"
             id="exampleId"
-            width="550"
-            height="400"
+            xAxisShow = true
+            yAxisShow = true
             yAxisTickFormat="yAxisTickFormatFunction()"
             xAxisTickFormat="xAxisTickFormatFunction()">
         	<svg></svg>

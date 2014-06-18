@@ -2,7 +2,13 @@ class PerformancesController < ApplicationController
 	respond_to :json
 
 	def user_performances
-		render :json => Performance.where(user_id: current_user.id).to_json, status: 200
+		perfs = Performance.where(user_id: current_user.id)#.to_json, status: 200
+		array_of_perfs = []
+		perfs.each do |perf|
+			array_of_perfs << {x: perf.id, y: perf.wpm, size: perf.total_characters}
+		end
+		p array_of_perfs
+		render :json => array_of_perfs.to_json, status: 200
 	end
 
 	def create
