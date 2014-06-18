@@ -11,19 +11,21 @@
 #= require_tree ./controllers/main
 #= require_tree ./directives/global
 #= require_tree ./directives/main
+#= require_tree ./bower_components/angularjs-nvd3-directives
+#= require_tree ./bower_components/nvd3
+#= require_tree ./bower_components/d3
 
 
-TypingTrainer = angular.module('TypingTrainer', ['ngRoute', 'Devise'])
+TypingTrainer = angular.module('TypingTrainer', ['ngRoute', 'Devise', 'nvd3ChartDirectives'])
 
 
 TypingTrainer.config(['$routeProvider', ($routeProvider) -> 
-  # Routes for '/post/'
   $routeProvider
     .when('/lessons/:lessonId', { templateUrl: '../assets/mainScripts.html', controller: 'ScriptsCtrl'})
     .when('/tracks', { templateUrl: '../assets/mainTracks.html', controller: 'TracksCtrl'})
     .when('/tracks/:trackName', {templateUrl: '../assets/mainLessons.html', controller: 'LessonCtrl'})
     .when('/gameplay/:scriptId', {templateUrl: '../assets/mainGamePlay.html', controller: 'GamePlayCtrl'} )
-    .when('/profile/:userId', {templateUrl: '../assets/profile.html', controller: 'ProfileCtrl'} )
+    .when('/profile', {templateUrl: '../assets/profile.html', controller: 'ProfileCtrl'} )
 
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrl'} )
 ])

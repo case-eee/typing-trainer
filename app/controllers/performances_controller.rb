@@ -1,6 +1,10 @@
 class PerformancesController < ApplicationController
 	respond_to :json
 
+	def user_performances
+		render :json => Performance.where(user_id: current_user.id).to_json, status: 200
+	end
+
 	def create
 		if user_signed_in? 
 			new_performance = current_user.performances.new(performance_params)

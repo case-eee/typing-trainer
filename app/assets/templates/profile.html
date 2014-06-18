@@ -1,5 +1,22 @@
 <nav-bar></nav-bar>
 	{{user.name}}
 
-	<button ng-click="getUserLessons()"></button>
-<p ng-repeat="lesson in user.lessons">{{lesson}}</p>
+	<button ng-click="getUserPerformances()">Load Performances</button>
+
+	<button ng-click="printData()">Print Data</button>
+
+	<button ng-click="getChart()">GEt Chart Brah</button>
+
+<p ng-repeat="performance in user.performances">{{performance}}</p>
+
+<div>
+	<nvd3-scatter-chart
+            data="exampleData"
+            id="exampleId"
+            width="550"
+            height="400"
+            yAxisTickFormat="yAxisTickFormatFunction()"
+            xAxisTickFormat="xAxisTickFormatFunction()">
+        	<svg></svg>
+    </nvd3-scatter-chart>
+</div>
