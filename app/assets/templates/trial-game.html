@@ -1,20 +1,26 @@
 <div class="col-md-6" >
-<h1 class="text-center">Get Ready to Play</h1>
-	  <pre>
-	    <code>
-	    	<div class='text'>
-		    	<span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span>
-	    	</div>
-	    </code>
-	  </pre>		
-	    <button class='text-center' ng-click="start()" ng-hide="totalKeypress">Click Here To Start</button>
-	
-	<div ng-show="finished" class="goods" style="box-shadow: 10px 10px 10px 10px #888888; margin: 20px;">
-	  <p>This many incorrect: <span>{{typos}}</span></p>    
-	  <p>Total key presses: <span>{{totalKeypress}}</span></p>    
-	  <p>Seconds Elapsed: <span>{{time_elapsed | date:'s.sss' }}</span></p>   
-	  <p>Characters per Second: <span>{{cps | number:4 }}</span></p>    
+  <h1 class="text-center">Must type everything correctly</h1>
+  <div class="row" id="game">
+    <div id="timer" ng-if="startTime && !endTime" ng-init="startTimer()" ng-controller="timerCtrl" class="center">{{counter/100 | number:2}}</div>
+    <p id="enterSign" ng-if="enterCall">Press Enter</p>
+    <pre>
+      <code><span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span></code>
+    </pre>
+    <button ng-click="start()" ng-hide="totalKeypress">Start Training</button>
+
+    <div ng-show='showScripts'>
+	    <a ng-click="restart(charList)">Restart</a>
+	    <a ng-click="restart(script.currentScript.id + 1)">Next Lesson</a>
+  	</div>
+  </div>
+
+
+  <div ng-show="endTime" class="goods" style="box-shadow: 10px 10px 10px 10px #888888; margin: 20px;">
+    <p>This many incorrect: <span>{{typos}}</span></p>    
+    <p>Total key presses: <span>{{totalKeypress}}</span></p>    
+    <p>Seconds Elapsed: <span>{{time_elapsed | date:'s' }}</span></p>   
+    <p>Characters per Second: <span>{{cps | number:1 }}</span></p>    
 		<p>You missed the <span>"{{ mostMissedChar }}"</span> character <span>{{ missedTimes}}</span> times :( </p>
 		<p>Practice more!!!</p>	
-	</div>
+  </div>
 </div>

@@ -1,7 +1,7 @@
-navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
+navBar = angular.module('TypingTrainer').directive('navBar',($location, $route, Auth) ->
     restrict: 'E',
     templateUrl:'/assets/nav-bar.html',
-    controller: ($scope) ->
+    controller: ($scope, $route) ->
       $scope.isSignedIn = Auth.isAuthenticated()
       console.log('isSignedIn:' + $scope.isSignedIn)
       $scope.isRegistered = true
@@ -52,9 +52,9 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, Auth) ->
         )
 
         $scope.home = ->
-          $location.url('../assets/mainIndex.html')
+          $route.reload()
        
           
 )     
 
-navBar.$inject = ['$location', 'Auth', '$scope']
+navBar.$inject = ['$location', '$route', 'Auth', '$scope']

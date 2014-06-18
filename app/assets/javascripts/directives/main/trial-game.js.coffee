@@ -87,9 +87,10 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
     # $scope.getChars = ->
     #   $scope.charList = $scope.script.currentScript.text.split ""
 
-    $scope.restart = (scriptId) ->
-      console.log(scriptId)
-      $route.reload()
+    $scope.restart = (script) ->
+      # console.log(script)
+      # console.log(script.join(''))
+      setScript(script.join(''))
 
     isComplete = ->
       if $scope.counter == $scope.charList.length
