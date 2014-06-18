@@ -16,10 +16,10 @@
   $scope.selectScript = (script) ->
     $location.url('/gameplay/' + script)
 
-  @deferred = $q.defer()  
-  @deferred.promise.then($scope.prepLessonScripts)
+  # @deferred = $q.defer()  
+  # @deferred.promise.then($scope.prepLessonScripts)
 
 # Provide deferred promise chain to the loadPosts function
-  scriptData.getScripts(@deferred)
+  # scriptData.getScripts(@deferred)
 
 @ScriptsCtrl.$inject = ['$scope', '$location', '$http', '$routeParams', 'scriptData', '$q']

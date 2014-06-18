@@ -1,6 +1,6 @@
-languagesDirective = angular.module('TypingTrainer').directive('languages',($location) ->
+sidebar = angular.module('TypingTrainer').directive('sidebar',() ->
   restrict: 'E',
-  templateUrl:'/assets/languages.html',
+  templateUrl:'/assets/sidebar.html',
   controller: ($scope, $http, scriptData) ->
     $scope.showLanguages = true
     $scope.showLessons = false
@@ -34,15 +34,7 @@ languagesDirective = angular.module('TypingTrainer').directive('languages',($loc
       $scope.showLessons = false
       $scope.showScripts = true
 
-    # $scope.selectLanguage = (language) ->
-    #   $scope.currentLanguage = language.name
-      # $scope.loadLessons = true
-
-    $scope.play = ->
-      $scope.loadLanguages = true
-    # $location.url('/languages')
-
     getlanguages()
 )
 
-languagesDirective.$inject = ['$scope', '$location', '$http']
+sidebar.$inject = ['$scope', '$location', '$http']
