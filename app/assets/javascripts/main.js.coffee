@@ -23,6 +23,7 @@ TypingTrainer.config(['$routeProvider', ($routeProvider) ->
     .when('/tracks', { templateUrl: '../assets/mainTracks.html', controller: 'TracksCtrl'})
     .when('/tracks/:trackName', {templateUrl: '../assets/mainLessons.html', controller: 'LessonCtrl'})
     .when('/gameplay/:scriptId', {templateUrl: '../assets/mainGamePlay.html', controller: 'GamePlayCtrl'} )
+    .when('/profile/:userId', {templateUrl: '../assets/profile.html', controller: 'ProfileCtrl'} )
 
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrl'} )
 ])
