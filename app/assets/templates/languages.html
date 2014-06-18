@@ -1,0 +1,22 @@
+<div id="language dir" class="container" style="margin-top: 40px">
+  <div ng-show="showLanguages">
+    <h4>Choose your language:</h4>
+    <ul ng-repeat='language in languages'>
+      <li><a class='btn' ng-click="getLessons(language.name)">{{ language.name }}</a></li>
+    </ul>
+  </div>
+  
+  <div ng-show="showLessons">
+    <h4>Select a lesson</h4>
+    <ul ng-repeat='lesson in lessons' >
+      <li><a class='btn' ng-click="getScripts(lesson.id)">Lesson {{ lesson.id }}</a></li>
+    </ul>
+  </div>
+
+  <div ng-show="showScripts">
+    <h4>Select a script</h4>
+    <ul ng-repeat='script in scripts'>
+      <li><a class='btn'>Script {{script.id }}</a></li>
+    </ul>
+  </div>
+</div>
