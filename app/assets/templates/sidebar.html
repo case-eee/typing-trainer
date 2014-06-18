@@ -16,7 +16,7 @@
   <div ng-show="showScripts">
     <h4>Select a script</h4>
     <ul ng-repeat='script in scripts'>
-      <li><a class='btn'>Script {{script.id }}</a></li>
+      <li><a class='btn' ng-click="setScript(script)">Script {{script.id }}</a></li>
     </ul>
   </div>
 </div>

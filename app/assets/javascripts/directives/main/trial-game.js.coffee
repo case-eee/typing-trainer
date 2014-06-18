@@ -21,8 +21,13 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
           text: 'Loading...'
           id: ''
 
+      $scope.setScript = (script) ->
+        console.log("call to setScript")
+        $scope.script.currentScript.text = script.text
+        $scope.script.currentScript.id = script.id
+        $scope.charList = $scope.script.currentScript.text.split ""
+
       prepScriptData = ->
-        # script = _.findWhere(scriptData.data.scripts, { id: parseInt($scope.scriptId) })
         random = Math.floor(Math.random() * scriptData.data.scripts.length)
         script = scriptData.data.scripts[random]
         $scope.script.currentScript.text = script.text
