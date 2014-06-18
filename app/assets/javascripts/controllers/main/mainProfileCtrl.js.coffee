@@ -11,7 +11,6 @@
         $scope.user.performances = data
         UserPerformancesLoaded = true
         console.log('Successfully loaded users Performances.')
-        console.log(data)
     ).error( ->
         console.error('Failed to load Performances.')
       )

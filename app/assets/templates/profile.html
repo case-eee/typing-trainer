@@ -1,20 +1,20 @@
 <nav-bar></nav-bar>
-	{{user.name}}
-
-	<button ng-click="getUserPerformances()">Load Performances</button>
-
-	<button ng-click="printData()">Print Data</button>
-
-	<button ng-click="getChart()">GEt Chart Brah</button>
+<div class="container">
+	<h2>{{user.name}}</h2>
+	<button ng-click="getChart()">Get Chart Brah</button>
 
 <!-- <p ng-repeat="performance in user.performances">{{performance}}</p> -->
 
-<div>
 	<nvd3-scatter-chart
             data="exampleData"
+            transitionDuration="3000"
             id="exampleId"
             xAxisShow = true
             yAxisShow = true
+            width="600"
+            height="400"
+            showDistX="true"
+            showDistY="true"
             yAxisTickFormat="yAxisTickFormatFunction()"
             xAxisTickFormat="xAxisTickFormatFunction()">
         	<svg></svg>
