@@ -1,5 +1,5 @@
 pre code {
-  text-align: center;
+  text-align: left;
   display: block; padding: 0.5em;
   color: #333;
   background: #f8f8ff;
@@ -26,11 +26,12 @@ pre code {
 .goods {
   text-align: center;
   color: green;
+  position: fixed;
 }
 
 .goods span {
   font-size: 16px;
-  font-weight: bold
+  font-weight: bold;
 }
 
 #timer {
@@ -48,6 +49,12 @@ pre code {
 }
 
 .text {
-text-align: center;
-margin-left: 10px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+#enterSign {
+  position: fixed;
+  margin-left: 20%;
+  color: green;
 }
