@@ -7,19 +7,31 @@ pre code {
   word-break: break-all;
   word-wrap: break-word;
   padding: 0.5em;
-  margin-left: 1em;
+/*  margin-left: 1em;*/
   background: none repeat scroll 0% 0% #F8F8FF;
 }
 
-#all {
-  /*background-color: green;*/
+code {
+  padding-top: 15em;
+  text-align: center;
+  /*position: fixed;*/
 }
+
+#all {
+  /*background-color: #A1FFFA;*/
+}
+
 .typed {
   color: black;
 }
 
+.typebox {
+  height: 10em;
+  width: auto;
+}
+
 img {
-  width: 70%;
+  width: 60%;
   height: auto;
 }
 
@@ -42,12 +54,13 @@ img {
 .goods {
   text-align: center;
   color: green;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 .goods span {
   font-size: 16px;
   font-weight: bold;
+  width: auto;
 }
 
 #timer {
@@ -64,20 +77,23 @@ img {
   margin-bottom: 20px;
 }
 
-.text {
-  text-align: center;
-  margin-left: 10px;
-}
 
 h1 {
   text-align: center;
 }
 
 ul {
+  padding-left: 0;
   list-style-type: none;
+  text-align: center
+}
+
+h4 {
+  text-align: center;
 }
 
 #button {
+  text-align: center;
   font-size: 26px;
   width: 200px !important;
 }
@@ -91,7 +107,8 @@ ul {
 }
 
 #sidebar {
-  padding-left: 5em;
+  text-align: center;
+  /*padding-left: 3em;*/
 }
 
 #enterSign {

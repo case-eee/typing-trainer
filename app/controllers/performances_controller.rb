@@ -6,26 +6,40 @@ class PerformancesController < ApplicationController
 		puts incorrect_characters
 		most_missed = {}
 
+		# USER
 		if user_signed_in? 
 			new_performance = current_user.performances.new(performance_params)
+
 			if new_performance.save
-				if incorrect_characters.length >= 1
+				if incorrect_characters == 0
+					most_missed[:character] = ""
+					most_missed[:times] = 0
+					render :json => most_missed.to_json, status: 200
+				elsif incorrect_characters.to_s.length > 1
 					most_missed[:character] = incorrect_characters.split(",").group_by(&:to_s).values.max_by(&:size).try(:first)
 					most_missed[:times] = incorrect_characters.group_by(&:to_s).values.max_by(&:size).length
 					render :json => most_missed.to_json, status: 200
-				else 
-					most_missed = 'NOTHING!'
+				else incorrect_characters.length == 1
+					most_missed[:character] = incorrect_characters.split(",").group_by(&:to_s).values.max_by(&:size).try(:first)
+					most_missed[:times] = incorrect_characters.split(",").group_by(&:to_s).values.max_by(&:size).length
 					render :json => most_missed.to_json, status: 200
 				end
 			end
+		
+		# NO USER
 		else
 			new_performance = Performance.create(performance_params)
-			if incorrect_characters.length >= 1
+			if incorrect_characters == 0
+				most_missed[:character] = ""
+				most_missed[:times] = 0
+				render :json => most_missed.to_json, status: 200
+			elsif incorrect_characters.to_s.length > 1
+				most_missed[:character] = incorrect_characters.split(",").group_by(&:to_s).values.max_by(&:size).try(:first)
+				most_missed[:times] = incorrect_characters.split(",").group_by(&:to_s).values.max_by(&:size).length
+				render :json => most_missed.to_json, status: 200
+			else incorrect_characters.length == 1
 				most_missed[:character] = incorrect_characters.split(",").group_by(&:to_s).values.max_by(&:size).try(:first)
 				most_missed[:times] = incorrect_characters.group_by(&:to_s).values.max_by(&:size).length
-				render :json => most_missed.to_json, status: 200
-			else 
-				most_missed = 'NOTHING!'
 				render :json => most_missed.to_json, status: 200
 			end
 		end

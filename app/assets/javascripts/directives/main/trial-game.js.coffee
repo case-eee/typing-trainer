@@ -17,6 +17,8 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
     $scope.unbdindBroadcast
     $scope.enterCall = false
     $scope.scriptSelected = false
+    $scope.allCorrect = false
+    $scope.gameComplete = false
 
     $scope.script =
       currentScript:
@@ -29,7 +31,6 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
       $scope.scriptSelected = true
       $scope.script.currentScript.text = script.text
       $scope.script.currentScript.instructions = script.instructions
-      console.log($scope.script.currentScript.instructions)
       $scope.script.currentScript.id = script.id
       $scope.charList = $scope.script.currentScript.text.split ""
 
@@ -63,8 +64,10 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
 
       # Do POST request to /posts.json
       $http.post('./performances.json', completionData).success( (data) ->
-        $scope.mostMissedChar = data.character.toString()
-        $scope.missedTimes = data.times.toString()
+        console.log(data)
+        $scope.allCorrect = true if data.times == 0
+        $scope.mostMissedChar = data.character.toString() if data != ""
+        $scope.missedTimes = data.times if data != 0
         console.log("Successfully sent data.")
         #dataSent = true
       ).error( ->
@@ -102,6 +105,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
         $scope.unbdindBroadcast()
         $scope.endTime = new Date()
         sendData()
+        $scope.gameComplete = true
       
     checkKey = (keypress) ->
       if keypress == $scope.charList[$scope.counter]
