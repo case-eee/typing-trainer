@@ -15,6 +15,15 @@ pre code {
   color: black;
 }
 
+#gameplay {
+  padding-right: 5em;
+
+}
+
+.start {
+  text-align: center;
+}
+
 .cursor {
   background-color: #B8B8B8;
 }
@@ -53,8 +62,28 @@ pre code {
   margin-left: 10px;
 }
 
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.instructions {
+  text-align: center;
+}
+
+#sidebar {
+  padding: none;
+}
+
 #enterSign {
   position: fixed;
   margin-left: 20%;
   color: green;
+}
+
+.custom {
+  width: 85px !important;
 }
