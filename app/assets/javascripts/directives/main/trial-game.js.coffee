@@ -27,6 +27,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
 
     $scope.setScript = (script) ->
       $scope.playedScript = script
+      nextScript(script)
       console.log($scope.playedScript)
       console.log("call to setScript")
       $scope.script.currentScript.text = script.text
@@ -46,6 +47,11 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
 
     # Provide deferred promise chain to the loadPosts function
     scriptData.getScripts(@deferred)
+
+    nextScript = (script) ->
+      console.log("INDEX: " + $scope.scripts.indexOf(script))
+      currentScriptIndex = $scope.scripts.indexOf(script)
+      $scope.nextScript = $scope.scripts[currentScriptIndex + 1]
 
   # --Game Play ------------------------
 
