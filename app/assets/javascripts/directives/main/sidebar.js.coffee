@@ -34,6 +34,17 @@ sidebar = angular.module('TypingTrainer').directive('sidebar',() ->
       $scope.showLessons = false
       $scope.showScripts = true
 
+    $scope.back = ->
+      console.log($scope.showLessons)
+      if $scope.showLessons
+        console.log("in lessons going back")
+        $scope.showLessons = false
+        $scope.showLanguages = true
+      else if $scope.showScripts
+        console.log("in scripts going back")
+        $scope.showScripts = false
+        $scope.showLessons = true
+
     getlanguages()
 )
 
