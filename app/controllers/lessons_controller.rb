@@ -7,4 +7,14 @@ class LessonsController < ApplicationController
 
 		render :json => lessons.to_json
 	end
+
+	def user_tracks
+		lessons = []
+		tracks = Track.where(user_id: current_user.id)
+		tracks.each do |track|
+			lessons << track.lesson			
+		end
+
+		render :json => lessons.to_json
+	end
 end

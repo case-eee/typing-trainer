@@ -1,2 +1,5 @@
 <nav-bar></nav-bar>
 	{{user.name}}
+
+	<button ng-click="getUserLessons()"></button>
+<p ng-repeat="lesson in user.lessons">{{lesson}}</p>

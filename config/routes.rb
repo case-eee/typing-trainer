@@ -11,7 +11,7 @@
   get '/lessons/:track_name', :to => 'lessons#index' 
   #get '/scripts/:lesson_id', :to => 'scripts#index' 
   get '/:script_id/gameplay', :to => 'scripts#show'
-  get '/profile/:user_id', :to => '????'
+  get '/profile', :to => 'lessons#user_tracks'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
