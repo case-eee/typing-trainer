@@ -157,7 +157,7 @@ trialGame = angular.module('TypingTrainer').directive('trialGame', ($location) -
     $scope.start = ->
       $scope.startTime = new Date()
       $("code span:first").addClass('cursor')
-      $('button').hide()
+      # $('button').hide()
       $scope.unbindBroadcast = $scope.$on "my:keypress", (event, keyEvent) ->
           $scope.listen(keyEvent)
 

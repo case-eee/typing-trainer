@@ -18,18 +18,32 @@
 
 TypingTrainer = angular.module('TypingTrainer', ['ngRoute', 'Devise', 'nvd3ChartDirectives'])
 
+var checkLoggedin = function($q, $timeout, $http, $location, $rootScope)
+  { var deferred = $q.defer();
+  $http.get('/loggedin').success(function(user){if (user !== '0') 
+  $timeout(deferred.resolve, 0); else { $rootScope.message = 'You need to log in.'; 
+  $timeout(function(){deferred.reject();}, 0); 
+  $location.url('/login'); } }); 
 
-TypingTrainer.config(['$routeProvider', ($routeProvider) -> 
+TypingTrainer.config(['$routeProvider', '$httpProvider', ($routeProvider, $httpProvider) -> 
+  
   $routeProvider
     .when('/lessons/:lessonId', { templateUrl: '../assets/mainScripts.html', controller: 'ScriptsCtrl'})
     .when('/tracks', { templateUrl: '../assets/mainTracks.html', controller: 'TracksCtrl'})
     .when('/tracks/:trackName', {templateUrl: '../assets/mainLessons.html', controller: 'LessonCtrl'})
     .when('/gameplay/:scriptId', {templateUrl: '../assets/mainGamePlay.html', controller: 'GamePlayCtrl'} )
-    .when('/profile', {templateUrl: '../assets/profile.html', controller: 'ProfileCtrl'} )
+    .when('/profile', {templateUrl: '../assets/profile.html', controller: 'ProfileCtrl', resolve: { loggedin: checkLoggedin } }
 
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexCtrl'} )
 ])
 
-TypingTrainer.config(["$httpProvider", (provider) ->
-  provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
-])
+# TypingTrainer.config(["$httpProvider", (provider) ->
+#   provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+# ])
+
+
+
+
+
+
+

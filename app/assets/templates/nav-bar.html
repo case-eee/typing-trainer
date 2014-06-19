@@ -4,7 +4,7 @@
       <li><a ng-click="home()">Home</a></li>  
     </ul>
     <div class="pull-right">
-      <form name="signInForm" ng-hide="!isRegistered || isSignedIn " class="navbar-form form-parsley" ng-animate="'animate'" novalidate>
+<!--       <form name="signInForm" ng-hide="!isRegistered || isSignedIn " class="navbar-form form-parsley" ng-animate="'animate'" novalidate>
         <div class="form-group error-msg">
           <span ng-show="errors">{{ errors }}</span>
         </div>
@@ -20,6 +20,25 @@
         <button class="btn" ng-click="login(user)" ng-animate="'animate'" ng-disabled="signInForm.$invalid || signInForm.$pristine">Log in</button>
         <button class="btn" ng-click="isRegistered = false" ng-animate="'animate'">Sign up</button>
       </form>
+ -->
+
+ <form action="/users/sign_in" method="post">
+  <input type="email" name="user[email]">
+  <input type="password" name="user[password]">
+  <input type="submit" value="Log In">
+ </form>
+
+  <form action="/users" method="post">
+  <input type="email" name="user[email]">
+  <input type="password" name="user[password]">
+  <input type="password" name="user[password_confirmation]">
+  <input type="submit" value="Sign Up">
+ </form>
+
+ <form action="/users/sign_out" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="GTFO">
+ </form>
 
       <form name="registrationForm" ng-hide="isRegistered" class="navbar-form form-parsley">
         <div class="form-group error-msg">

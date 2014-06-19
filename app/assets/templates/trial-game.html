@@ -3,34 +3,30 @@
     <h2 class="text-center">Test your typing skills!</h2>
     <h5 class='instructions'> Instructions: {{ script.currentScript.instructions }}</h5>
   </div>
+
   <div ng-hide="scriptSelected">
     <h1>Try Key2Code now!</h1>
     <h4 class="instructions">Type the code below as accurately as you can!</h4>
   </div>
+  
   <div class='diagram'><img src="/assets/keyboard2.jpg" alt='keydiagram'></div>
+  
   <br>
+  
   <div class="row" id="game">
     <p id="enterSign" ng-if="enterCall">Press Enter</p>
     <pre class='typebox'>
       <code><span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span></code>
     </pre>
-<<<<<<< HEAD
+
       <div id="timer" ng-if="startTime && !endTime" ng-init="startTimer()" ng-controller="timerCtrl" class="center">{{counter/100 | number:2}}</div>
     <div class='start'>
       <button ng-click="start()" ng-hide="totalKeypress">Start Training</button>
-      <div ng-show='showScripts'>
-  	    <a ng-click="restart(charList)">Restart</a>
-  	    <a ng-click="restart(script.currentScript.id + 1)">Next Lesson</a>
-    	</div>
+      <div ng-show='startTime'>
+        <a ng-click="restart(playedScript)">Restart</a>
+        <a ng-click="restart(nextScript)">Next Lesson</a>
+      </div>
     </div>
-=======
-    <button ng-click="start()" ng-hide="totalKeypress">Start Training</button>
-
-    <div ng-show='startTime'>
-	    <a ng-click="restart(playedScript)">Restart</a>
-	    <a ng-click="restart(nextScript)">Next Lesson</a>
-  	</div>
->>>>>>> 0e660899f84763000543aac52348ef4c8432deaa
   </div>
 
   <div ng-show="gameComplete">

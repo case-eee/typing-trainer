@@ -1,7 +1,9 @@
 class PerformancesController < ApplicationController
+	 # before_action :authenticate_user!
 	respond_to :json
 
 	def user_performances
+		p current_user
 		perfs = Performance.where(user_id: current_user.id)#.to_json, status: 200
 		array_of_perfs = []
 		perfs.each do |perf|
