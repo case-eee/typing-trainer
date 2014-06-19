@@ -1,6 +1,8 @@
 <nav-bar></nav-bar>
 <div class="container">
-	<!-- <h2>{{user.name}}</h2> -->
+	<h2>{{user.name}}</h2>
+    <h2>Go Fast!</h2>
+    <h3>User performance: Characters per second</h3>
     <!-- <button ng-click="getUserPerformances()">Load Data Brah</button> -->
     <button ng-click="getChart()">Get Chart Brah</button>
 <!-- <p ng-repeat="performance in user.performances">{{performance}}</p> -->
@@ -14,7 +16,9 @@
             width="600"
             height="400"
             showDistX="true"
-            showDistY="true"
+            xaxislabel="Days of the week"
+            showDistY=true
+            showLegend=true
             yAxisTickFormat="yAxisTickFormatFunction()"
             xAxisTickFormat="xAxisTickFormatFunction()">
         	<svg></svg>
