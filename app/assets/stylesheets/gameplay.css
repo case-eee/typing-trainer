@@ -1,3 +1,8 @@
+code {
+  padding-top: 15em;
+  /*position: fixed;*/
+}
+
 pre code {
   text-align: center;
   display: block; padding: 0.5em;
@@ -9,13 +14,11 @@ pre code {
   padding: 0.5em;
 /*  margin-left: 1em;*/
   background: none repeat scroll 0% 0% #F8F8FF;
+  text-align: left;
+  padding-left: 25em;
+  margin-left: 13em;
 }
 
-code {
-  padding-top: 15em;
-  text-align: center;
-  /*position: fixed;*/
-}
 
 #all {
   /*background-color: #A1FFFA;*/
@@ -116,8 +119,10 @@ h4 {
 }
 
 #enterSign {
-  position: fixed;
-  margin-left: 20%;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  /*margin-left: 20%;*/
   color: green;
 }
 
