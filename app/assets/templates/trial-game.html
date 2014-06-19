@@ -1,50 +1,51 @@
-<div id='gameplay' class="col-md-6" >
-  <div ng-show="scriptSelected">
-    <h2 class="text-center">Test your typing skills!</h2>
-    <h5 class='instructions'> Instructions: {{ script.currentScript.instructions }}</h5>
-  </div>
-  <div ng-hide="scriptSelected">
-    <h1>Try Key2Code now!</h1>
-    <h4 class="instructions">Type the code below as accurately as you can!</h4>
-  </div>
-  <div class='diagram'><img src="/assets/keyboard2.jpg" alt='keydiagram'></div>
-  <br>
-  <div class="row" id="game">
-    <p id="enterSign" ng-if="enterCall">Press Enter</p>
-    <pre class='typebox'>
-      <code><span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span></code>
-    </pre>
-<!-- <<<<<<< HEAD -->
-      <div id="timer" ng-if="startTime && !endTime" ng-init="startTimer()" ng-controller="timerCtrl" class="center">{{counter/100 | number:2}}</div>
-    <div class='start'>
-      <button ng-click="start()" ng-hide="totalKeypress">Start Training</button>
-      <div ng-show='showScripts'>
-  	    <a ng-click="restart(charList)">Restart</a>
-  	    <a ng-click="restart(script.currentScript.id + 1)">Next Lesson</a>
-    	</div>
+    <div class="row" id="game">
+
+      <pre class='typebox'>
+        <p id="enterSign" ng-if="enterCall">Press Enter</p>
+        <code><span ng-repeat="char in charList track by $index" class="untyped">{{char}}</span></code>
+      </pre>
+    
+      <div id="timer" ng-if="startTime && !endTime" ng-init="startTimer()" ng-controller="timerCtrl" class="center">
+        {{counter/100 | number:2}}
+      </div>
+    
+      <div class='start'>
+        <button class="btn btn-lg" ng-click="start()" ng-hide="totalKeypress">Start Training</button>
+        <div ng-show='startTime'>
+            <a ng-click="restart(playedScript)">Restart</a> | <a ng-click="restart(nextScript)">Next Lesson >></a>
+        </div>
+      </div>
+
     </div>
-<!-- =======
-    <button ng-click="start()" ng-hide="totalKeypress">Start Training</button>
+<br><br><br><br>
+    <div class='diagram'>
+        <img src="/assets/keyboard2.jpg" alt='keydiagram'>
+    </div>
 
-    <div ng-show='startTime'>
-	    <a ng-click="restart(playedScript)">Restart</a>
-	    <a ng-click="restart(nextScript)">Next Lesson</a>
-  	</div>
->>>>>>> 0e660899f84763000543aac52348ef4c8432deaa -->
-  </div>
+    <br>
 
-  <div ng-show="gameComplete">
-    <div class="alert alert-info">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>Your Results: </strong>
-        <p>Number incorrect: <span>{{typos}}</span></p>    
-        <p>Total key presses: <span>{{totalKeypress}}</span></p>    
-        <p>Seconds Elapsed: <span>{{time_elapsed | date:'s' }}</span></p>   
-        <p>Characters per Second: <span>{{cps | number:1 }}</span></p>    
-    		<div ng-hide="allCorrect">
-          <p>You missed the <span>"{{ mostMissedChar }}"</span> character <span>{{ missedTimes}}</span> times :( </p>
-    		  <p>Practice more!!!</p>	
+    <div ng-show="gameComplete">
+        <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Your Results:</strong>
+            <p>Number incorrect:
+                <span>{{typos}}</span>
+            </p>
+            <p>Total key presses:
+                <span>{{totalKeypress}}</span>
+            </p>
+            <p>Seconds Elapsed:
+                <span>{{time_elapsed | date:'s' }}</span>
+            </p>
+            <p>Characters per Second:
+                <span>{{cps | number:1 }}</span>
+            </p>
+            <div ng-hide="allCorrect">
+                <p>You missed the
+                    <span>"{{ mostMissedChar }}"</span>character
+                    <span>{{ missedTimes}}</span>times :(</p>
+                <p>Practice more!!!</p>
+            </div>
         </div>
     </div>
-  </div>  
 </div>

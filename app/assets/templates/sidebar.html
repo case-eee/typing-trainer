@@ -1,6 +1,6 @@
 <div id="sidebar">
   <div ng-show="showLanguages">
-    <h4>Select a language:</h4>
+    <h2>Select a language:</h2>
     <br>
     <ul ng-repeat='language in languages'>
       <li><a id="button" class='btn custom' ng-click="getLessons(language.name)">{{ language.name }}</a></li>
@@ -8,7 +8,7 @@
   </div>
   
   <div ng-show="showLessons">
-    <h4>Select a lesson</h4>
+    <h2>Select a lesson:</h2>
     <br>
     <ul ng-repeat='lesson in lessons' >
       <li><a id="button" class='btn custom' ng-click="getScripts(lesson.id)">{{ lesson.title }}</a></li>
@@ -16,7 +16,7 @@
   </div>
 
   <div ng-show="showScripts">
-    <h4>Select a script</h4>
+    <h2>Select a script:</h2>
     <br>
     <ul ng-repeat='script in scripts'>
       <li><a id="button" class='btn custom' ng-click="setScript(script)">Level: {{ script.sub_difficulty }}</a></li>
