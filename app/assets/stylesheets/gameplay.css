@@ -7,17 +7,18 @@ pre code {
   text-align: center;
   display: block; padding: 0.5em;
   color: #333;
-  background: #f8f8ff;
+  backgroungot: #f8f8ff;
   white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
   padding: 0.5em;
 /*  margin-left: 1em;*/
   background: none repeat scroll 0% 0% #F8F8FF;
   text-align: left;
-  padding-left: 25em;
-  margin-left: 13em;
-  font-size: medium;
+  /*padding-left: em;*/
+  margin-left: 3em;
+}
+
+pre code span {
+  font-size: 1.5em;
 }
 
 #all {
@@ -29,7 +30,7 @@ pre code {
 }
 
 .typebox {
-  height: 10em;
+  height: auto;
   width: auto;
 }
 
@@ -124,6 +125,8 @@ h4 {
   position: absolute;
   /*margin-left: 20%;*/
   color: green;
+  top: 130px;
+  left: 380px;
 }
 
 .custom {
