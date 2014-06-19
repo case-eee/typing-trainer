@@ -2,31 +2,48 @@ navBar = angular.module('TypingTrainer').directive('navBar',($location, $route, 
     restrict: 'E',
     templateUrl:'/assets/nav-bar.html',
     controller: ($scope, $route) ->
-      $scope.isSignedIn = Auth.isAuthenticated()
-      console.log('isSignedIn:' + $scope.isSignedIn)
+
+
+      Auth.currentUser().then((user) ->
+        $scope.isSignedIn = true
+        console.log('currentUser: ' + user)
+      )
+
+      console.log('Auth ' + Auth.isAuthenticated())
+        
+      $scope.isSignedIn = Auth.isAuthenticated() 
       $scope.isRegistered = true
       $scope.errors = null
 
       $scope.login = (user) ->
         Auth.login(user).then((user) ->
-          console.log('logged in')
           $scope.isSignedIn = true
         , (error) ->
             console.log('ERROR')
             console.log('error: ' + error)  
+        ).finally( ->
+            $scope.user.email = ''
+            $scope.user.password = ''
         )
-       
-        $scope.$on('devise:unauthorized',(event, xhr, deferred) ->
-          console.log(event)
+
+      $scope.$on('devise:unauthorized',(event, xhr, deferred) ->
+        console.log('in listener')
+        console.log(xhr.data.error)
+        console.log($location.$$path)
+        if $location.$$path != ''
+          $location.url('/')
+          $scope.errors = xhr.data.error
+
+        if xhr.data.error == "Invalid email or password."
+          $scope.errors = xhr.data.error
           $scope.user.email = ''
           $scope.user.password = ''
-          $scope.errors = "Invalid email or password" 
-        )
+      )
 
 
       $scope.logout = ->
         Auth.logout().then( (oldUser) ->
-          $scope.isSignedIn = Auth.isAuthenticated()
+          $scope.isSignedIn = false
           console.log($scope.isSignedIn)
           console.log('logged out')
           $location.url('/')
