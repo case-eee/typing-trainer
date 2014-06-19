@@ -1,0 +1,8 @@
+<nav-bar></nav-bar>
+
+<div class="container" style="margin-top: 40px">
+<h1 class="text-center">Scripts</h1>
+	<ul ng-repeat='script in scripts.currentScripts'>
+		<li><a class='btn' ng-click="selectScript(script.id)">Script {{ $index + 1 }}</a></li>
+	</ul>
+</div>

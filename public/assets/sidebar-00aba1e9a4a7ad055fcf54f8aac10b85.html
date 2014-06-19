@@ -1,0 +1,27 @@
+<div id="sidebar">
+  <div ng-show="showLanguages">
+    <h2>Select a language:</h2>
+    <br>
+    <ul ng-repeat='language in languages'>
+      <li><a id="button" class='btn custom' ng-click="getLessons(language.name)">{{ language.name }}</a></li>
+    </ul>
+  </div>
+  
+  <div ng-show="showLessons">
+    <h2>Select a lesson:</h2>
+    <br>
+    <ul ng-repeat='lesson in lessons' >
+      <li><a id="button" class='btn custom' ng-click="getScripts(lesson.id)">{{ lesson.title }}</a></li>
+    </ul>
+  </div>
+
+  <div ng-show="showScripts">
+    <h2>Select a script:</h2>
+    <br>
+    <ul ng-repeat='script in scripts'>
+      <li><a id="button" class='btn custom' ng-click="setScript(script)">Level: {{ script.sub_difficulty }}</a></li>
+    </ul>
+  </div>
+
+  <a ng-click="back()" ng-show="showLessons || showScripts">Back</a>
+</div>
