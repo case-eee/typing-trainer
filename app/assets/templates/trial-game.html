@@ -29,7 +29,7 @@
 
     </div>
 <br><br><br><br>
-    <div class='diagram'>
+    <div class='diagram' ng-hide="startTime">
         <img src="/assets/keyboard2.jpg" alt='keydiagram'>
     </div>
 
@@ -51,12 +51,12 @@
             <p>Characters per Second:
                 <span>{{cps | number:1 }}</span>
             </p>
-            <div ng-hide="allCorrect">
+            <!-- <div ng-hide="allCorrect">
                 <p>You missed the
                     <span>"{{ mostMissedChar }}"</span>character
                     <span>{{ missedTimes}}</span>times :(</p>
+            </div> -->
                 <p>Practice more!!!</p>
-            </div>
         </div>
     </div>
 </div>

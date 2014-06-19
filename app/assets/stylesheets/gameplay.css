@@ -127,3 +127,7 @@ h4 {
 .custom {
   width: 105px !important;
 }
+
+.alert-info {
+  text-align: center;
+}
