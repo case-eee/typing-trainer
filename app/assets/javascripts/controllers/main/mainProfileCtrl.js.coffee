@@ -22,7 +22,7 @@
 
   $scope.getChart = ->
     $scope.exampleData = [
-      key: "Total Characters Typed"
+      key: "Percentage Correct"
       values: $scope.exampleData = $scope.user.performances
     ]
 

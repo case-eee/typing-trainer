@@ -1,22 +1,22 @@
 <nav-bar></nav-bar>
 <div class="container">
-	<h2>{{user.name}}</h2>
+	<!-- <h2>{{user.name}}</h2> -->
     <h2>Go Fast!</h2>
-    <h3>User performance: Characters per second</h3>
+    <h3>User performance: Characters per second across all scripts</h3>
     <!-- <button ng-click="getUserPerformances()">Load Data Brah</button> -->
     <button ng-click="getChart()">Get Chart Brah</button>
 <!-- <p ng-repeat="performance in user.performances">{{performance}}</p> -->
 
 	<nvd3-scatter-chart
             data="exampleData"
-            transitionDuration="3000"
+            transitionDuration="2000"
             id="exampleId"
             xAxisShow = true
             yAxisShow = true
             width="600"
             height="400"
             showDistX="true"
-            xaxislabel="Days of the week"
+            xaxislabel="Coding Attempt Number"
             showDistY=true
             showLegend=true
             yAxisTickFormat="yAxisTickFormatFunction()"

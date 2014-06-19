@@ -66,5 +66,5 @@ ruby_dos.scripts.create!(instructions: "Practice your typing skills. Be sure to 
 Lesson.all.each {|l| testman.lessons << l}
 
 20.times do 
-	testman.performances.create!(number_missed: 12, total_characters: Random.rand(20..120), time_elapsed: "2000-01-01T00:00:42.000Z", wpm: Random.rand(6), missed_characters: "u,y,n,c,c,c,c,i,),;,i,t", script_id: uno.scripts.first.id)
+	testman.performances.create!(number_missed: Random.rand(1..30), total_characters: Random.rand(20..120), time_elapsed: "2000-01-01T00:00:42.000Z", wpm: Random.rand(6), missed_characters: "u,y,n,c,c,c,c,i,),;,i,t", script_id: js_uno.scripts.first.id)
 end

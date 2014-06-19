@@ -5,7 +5,9 @@ class PerformancesController < ApplicationController
 		perfs = Performance.where(user_id: current_user.id)#.to_json, status: 200
 		array_of_perfs = []
 		perfs.each do |perf|
-			array_of_perfs << {x: perf.id, y: perf.wpm, size: perf.total_characters}
+			# This calculates the number correct over total characters
+			tmp = perf.total_characters-perf.number_missed/perf.total_characters*100 || 1
+			array_of_perfs << {x: perf.id, y: perf.wpm, size: tmp}
 		end
 		p array_of_perfs
 		render :json => array_of_perfs.to_json, status: 200
