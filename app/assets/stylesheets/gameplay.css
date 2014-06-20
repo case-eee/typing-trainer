@@ -42,6 +42,10 @@ img {
   text-align: center;
 }
 
+#startbtn {
+  font-size: 24px;
+}
+
 .cursor {
   background-color: #B8B8B8;
 }
@@ -67,13 +71,13 @@ img {
 }
 
 #timer {
-  padding-top: 5px;
+  padding-top: 3px;
   text-align: center;
-  width: 75px;
-  height: 50px;
+  width: 83px;
+  height: 55px;
   background-color: darkgray;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 10%;
   border: 1px solid black;
   margin: 0 auto;
@@ -95,10 +99,18 @@ h4 {
   text-align: center;
 }
 
+.links {
+  font-size: 26px;
+}
+
+.back {
+  font-size: 20px;
+}
+
 #button {
   text-align: center;
   font-size: 26px;
-  width: 200px !important;
+  width: 220px !important;
 }
 
 .instructions {
@@ -109,9 +121,17 @@ h4 {
   text-align: center;
 }
 
+#profile {
+  text-align: center;
+}
+
 #sidebar {
   text-align: center;
   /*padding-left: 3em;*/
+}
+
+.chart {
+  top: 100px;
 }
 
 #enterSign {
@@ -130,4 +150,5 @@ h4 {
 
 .alert-info {
   text-align: center;
+  font-size: 20px;
 }
