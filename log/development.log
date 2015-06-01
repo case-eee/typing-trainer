@@ -1,0 +1,566 @@
+  [1m[36m (25.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (4.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140613192523)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (20.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (6.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613192523"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLessons (20140613192537)
+  [1m[35m (5.9ms)[0m  BEGIN
+  [1m[36m (9.1ms)[0m  [1mCREATE TABLE "lessons" ("id" serial primary key, "title" character varying(255), "difficulty_level" integer, "language_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613192537"]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLanguages (20140613193642)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (8.7ms)[0m  [1mCREATE TABLE "languages" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613193642"]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScripts (20140613193710)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (16.9ms)[0m  [1mCREATE TABLE "scripts" ("id" serial primary key, "text" character varying(255), "instructions" character varying(255), "lesson_id" integer, "sub_difficulty" integer, "average_cps" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613193710"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePerformances (20140613193723)
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36m (15.4ms)[0m  [1mCREATE TABLE "performances" ("id" serial primary key, "number_missed" integer, "total_characters" integer, "time_elapsed" time, "wpm" float, "missed_characters" character varying(255), "script_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613193723"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTracks (20140613195200)
+  [1m[35m (5.6ms)[0m  BEGIN
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "tracks" ("id" serial primary key, "user_id" integer, "lesson_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140613195200"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddDeviseToUsers (20140615012535)
+  [1m[35m (5.8ms)[0m  BEGIN
+  [1m[36m (19.9ms)[0m  [1mALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (7.1ms)[0m  ALTER TABLE "users" ADD COLUMN "encrypted_password" character varying(255) DEFAULT '' NOT NULL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "reset_password_token" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "reset_password_sent_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "remember_created_at" timestamp[0m
+  [1m[35m (28.9ms)[0m  ALTER TABLE "users" ADD COLUMN "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "current_sign_in_at" timestamp[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "last_sign_in_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "current_sign_in_ip" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "last_sign_in_ip" character varying(255)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140615012535"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mLanguage Load (0.3ms)[0m  [1mSELECT "languages".* FROM "languages"[0m
+  [1m[35mLesson Load (0.3ms)[0m  SELECT "lessons".* FROM "lessons"
+  [1m[36mScript Load (0.3ms)[0m  [1mSELECT "scripts".* FROM "scripts"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'dbcrocks@dbc.com' LIMIT 1[0m
+  [1m[35mSQL (17.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.808579"], ["email", "dbcrocks@dbc.com"], ["encrypted_password", "$2a$10$E03I8ugAxM52CdQ0c4biL.B6QFHf1etbjO.SMsFabRJmHuyWHj18S"], ["updated_at", "2015-06-01 02:02:30.808579"]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO "languages" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.841274"], ["name", "JavaScript"], ["updated_at", "2015-06-01 02:02:30.841274"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "languages" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.849641"], ["name", "Ruby"], ["updated_at", "2015-06-01 02:02:30.849641"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "languages" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.851612"], ["name", "Python"], ["updated_at", "2015-06-01 02:02:30.851612"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "languages" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.853031"], ["name", "Objective C"], ["updated_at", "2015-06-01 02:02:30.853031"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.870358"], ["difficulty_level", 1], ["language_id", 1], ["title", "Parentheses ( )"], ["updated_at", "2015-06-01 02:02:30.870358"]]
+  [1m[35m (5.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.884684"], ["difficulty_level", 2], ["language_id", 1], ["title", "Brackets [ ]"], ["updated_at", "2015-06-01 02:02:30.884684"]]
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.892254"], ["difficulty_level", 3], ["language_id", 1], ["title", "Semi-Colons ;"], ["updated_at", "2015-06-01 02:02:30.892254"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.895360"], ["difficulty_level", 4], ["language_id", 1], ["title", "Quotations \" \""], ["updated_at", "2015-06-01 02:02:30.895360"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.897883"], ["difficulty_level", 2], ["language_id", 1], ["title", "Dollar Signs $"], ["updated_at", "2015-06-01 02:02:30.897883"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.900910"], ["difficulty_level", 1], ["language_id", 2], ["title", "Parentheses ( )"], ["updated_at", "2015-06-01 02:02:30.900910"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.903228"], ["difficulty_level", 2], ["language_id", 2], ["title", "Colons :"], ["updated_at", "2015-06-01 02:02:30.903228"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.904941"], ["difficulty_level", 3], ["language_id", 1], ["title", "Brackets [ ]"], ["updated_at", "2015-06-01 02:02:30.904941"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.906406"], ["difficulty_level", 4], ["language_id", 2], ["title", "Curly Braces { }"], ["updated_at", "2015-06-01 02:02:30.906406"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.907835"], ["difficulty_level", 5], ["language_id", 2], ["title", "Pipes | |"], ["updated_at", "2015-06-01 02:02:30.907835"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.909523"], ["difficulty_level", 5], ["language_id", 2], ["title", "Underscores _"], ["updated_at", "2015-06-01 02:02:30.909523"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.911396"], ["difficulty_level", 1], ["language_id", 3], ["title", "Lesson 1"], ["updated_at", "2015-06-01 02:02:30.911396"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.913028"], ["difficulty_level", 2], ["language_id", 3], ["title", "Lesson 2"], ["updated_at", "2015-06-01 02:02:30.913028"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.914769"], ["difficulty_level", 3], ["language_id", 3], ["title", "Lesson 3"], ["updated_at", "2015-06-01 02:02:30.914769"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.916297"], ["difficulty_level", 4], ["language_id", 3], ["title", "Lesson 4"], ["updated_at", "2015-06-01 02:02:30.916297"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.917869"], ["difficulty_level", 5], ["language_id", 3], ["title", "Lesson 5"], ["updated_at", "2015-06-01 02:02:30.917869"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.919712"], ["difficulty_level", 1], ["language_id", 4], ["title", "Lesson 1"], ["updated_at", "2015-06-01 02:02:30.919712"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.921179"], ["difficulty_level", 2], ["language_id", 4], ["title", "Lesson 2"], ["updated_at", "2015-06-01 02:02:30.921179"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.922918"], ["difficulty_level", 3], ["language_id", 4], ["title", "Lesson 3"], ["updated_at", "2015-06-01 02:02:30.922918"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2015-06-01 02:02:30.924540"], ["difficulty_level", 4], ["language_id", 4], ["title", "Lesson 4"], ["updated_at", "2015-06-01 02:02:30.924540"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "lessons" ("created_at", "difficulty_level", "language_id", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:30.926238"], ["difficulty_level", 5], ["language_id", 4], ["title", "Lesson 5"], ["updated_at", "2015-06-01 02:02:30.926238"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.938537"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!"], ["lesson_id", 1], ["sub_difficulty", 1], ["text", "(var) (hello) (world)"], ["updated_at", "2015-06-01 02:02:30.938537"]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.953862"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!"], ["lesson_id", 1], ["sub_difficulty", 2], ["text", "$(document).ready(function (){\n   this.name = name\n});"], ["updated_at", "2015-06-01 02:02:30.953862"]]
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.962461"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!"], ["lesson_id", 1], ["sub_difficulty", 3], ["text", "var list = []\n $('#list').each(function(){\n  var name = $(this).find('.item');\n});"], ["updated_at", "2015-06-01 02:02:30.962461"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.965003"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!"], ["lesson_id", 1], ["sub_difficulty", 4], ["text", "function sayHello() {\n  alert('Hello there!')\n}"], ["updated_at", "2015-06-01 02:02:30.965003"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.967301"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!"], ["lesson_id", 1], ["sub_difficulty", 5], ["text", "StoreList.getItems = function() {}"], ["updated_at", "2015-06-01 02:02:30.967301"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.969393"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below!"], ["lesson_id", 1], ["sub_difficulty", 6], ["text", "var price = $(this).find('.price')"], ["updated_at", "2015-06-01 02:02:30.969393"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.971282"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 2], ["sub_difficulty", 1], ["text", "$.post(\"/ajax\", data, function(response)"], ["updated_at", "2015-06-01 02:02:30.971282"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.973067"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 2], ["sub_difficulty", 2], ["text", "console.log(returnValue);"], ["updated_at", "2015-06-01 02:02:30.973067"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.974679"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 2], ["sub_difficulty", 3], ["text", "var data = window.location.substr(1);"], ["updated_at", "2015-06-01 02:02:30.974679"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.976304"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 2], ["sub_difficulty", 4], ["text", "$('#ajax_page').ready(function(){})"], ["updated_at", "2015-06-01 02:02:30.976304"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.978018"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 2], ["sub_difficulty", 5], ["text", "list.push({name: name[0].innerHTML})"], ["updated_at", "2015-06-01 02:02:30.978018"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.982650"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 2], ["sub_difficulty", 6], ["text", "var data = $('input[type='radio']').data();"], ["updated_at", "2015-06-01 02:02:30.982650"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.984746"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 6], ["sub_difficulty", 1], ["text", "() ( ) (   ) (hello)"], ["updated_at", "2015-06-01 02:02:30.984746"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.986288"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 6], ["sub_difficulty", 2], ["text", "(dbc) (rocks) (code) (code)"], ["updated_at", "2015-06-01 02:02:30.986288"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.987927"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 6], ["sub_difficulty", 3], ["text", "(class) (method) (string)"], ["updated_at", "2015-06-01 02:02:30.987927"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.989715"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 6], ["sub_difficulty", 4], ["text", "def recipe(ingredients) \n   all_recipes(cake)\nend"], ["updated_at", "2015-06-01 02:02:30.989715"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.991424"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 6], ["sub_difficulty", 5], ["text", "def initialize(shoes)\n   new_shoe(color) = current_color\n   new_shoe(size) = size\nend"], ["updated_at", "2015-06-01 02:02:30.991424"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.993083"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 6], ["sub_difficulty", 6], ["text", "def initialize(cookies)\n   new_cookie(chocolate_chip) = chocolate_chip\n   new_cookie(size) = size\nend"], ["updated_at", "2015-06-01 02:02:30.993083"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.994743"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 7], ["sub_difficulty", 1], ["text", ": : : : : : :a :b :c :d :e"], ["updated_at", "2015-06-01 02:02:30.994743"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.996465"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 7], ["sub_difficulty", 2], ["text", ":cat :dog :fish :cow :monkey"], ["updated_at", "2015-06-01 02:02:30.996465"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.998191"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 7], ["sub_difficulty", 3], ["text", ":blue :red :green :orange :purple"], ["updated_at", "2015-06-01 02:02:30.998191"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:30.999710"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 7], ["sub_difficulty", 4], ["text", "attr_reader :inventory, :shoe, :color"], ["updated_at", "2015-06-01 02:02:30.999710"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["average_cps", 0], ["created_at", "2015-06-01 02:02:31.001238"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 7], ["sub_difficulty", 5], ["text", "attr_accessor :temperature, :timer"], ["updated_at", "2015-06-01 02:02:31.001238"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scripts" ("average_cps", "created_at", "instructions", "lesson_id", "sub_difficulty", "text", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["average_cps", 0], ["created_at", "2015-06-01 02:02:31.003213"], ["instructions", "Practice your typing skills. Be sure to use the correct finger as shown on the diagram below."], ["lesson_id", 7], ["sub_difficulty", 6], ["text", "def initialize\n   attr_writer :rows, :columns, :boxes\n   attr_accessor :complete, :choices\nend"], ["updated_at", "2015-06-01 02:02:31.003213"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mLesson Load (0.2ms)[0m  [1mSELECT "lessons".* FROM "lessons"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.021620"], ["lesson_id", 1], ["updated_at", "2015-06-01 02:02:31.021620"], ["user_id", 1]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.036394"], ["lesson_id", 2], ["updated_at", "2015-06-01 02:02:31.036394"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.038917"], ["lesson_id", 3], ["updated_at", "2015-06-01 02:02:31.038917"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.041189"], ["lesson_id", 4], ["updated_at", "2015-06-01 02:02:31.041189"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.043348"], ["lesson_id", 5], ["updated_at", "2015-06-01 02:02:31.043348"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.045343"], ["lesson_id", 6], ["updated_at", "2015-06-01 02:02:31.045343"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.047102"], ["lesson_id", 7], ["updated_at", "2015-06-01 02:02:31.047102"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.048629"], ["lesson_id", 8], ["updated_at", "2015-06-01 02:02:31.048629"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.050532"], ["lesson_id", 9], ["updated_at", "2015-06-01 02:02:31.050532"], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.052490"], ["lesson_id", 10], ["updated_at", "2015-06-01 02:02:31.052490"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.061359"], ["lesson_id", 11], ["updated_at", "2015-06-01 02:02:31.061359"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.063204"], ["lesson_id", 12], ["updated_at", "2015-06-01 02:02:31.063204"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.064973"], ["lesson_id", 13], ["updated_at", "2015-06-01 02:02:31.064973"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.066576"], ["lesson_id", 14], ["updated_at", "2015-06-01 02:02:31.066576"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.068351"], ["lesson_id", 15], ["updated_at", "2015-06-01 02:02:31.068351"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.070444"], ["lesson_id", 16], ["updated_at", "2015-06-01 02:02:31.070444"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.072240"], ["lesson_id", 17], ["updated_at", "2015-06-01 02:02:31.072240"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.073813"], ["lesson_id", 18], ["updated_at", "2015-06-01 02:02:31.073813"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.075267"], ["lesson_id", 19], ["updated_at", "2015-06-01 02:02:31.075267"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2015-06-01 02:02:31.076783"], ["lesson_id", 20], ["updated_at", "2015-06-01 02:02:31.076783"], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tracks" ("created_at", "lesson_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.078641"], ["lesson_id", 21], ["updated_at", "2015-06-01 02:02:31.078641"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.3ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.091979"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 17], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 47], ["updated_at", "2015-06-01 02:02:31.091979"], ["user_id", 1], ["wpm", 4.0]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.3ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.108595"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 21], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 56], ["updated_at", "2015-06-01 02:02:31.108595"], ["user_id", 1], ["wpm", 3.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.111576"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 9], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 96], ["updated_at", "2015-06-01 02:02:31.111576"], ["user_id", 1], ["wpm", 4.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.114381"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 5], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 112], ["updated_at", "2015-06-01 02:02:31.114381"], ["user_id", 1], ["wpm", 6.0]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.116851"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 14], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 78], ["updated_at", "2015-06-01 02:02:31.116851"], ["user_id", 1], ["wpm", 3.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.3ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.119671"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 14], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 44], ["updated_at", "2015-06-01 02:02:31.119671"], ["user_id", 1], ["wpm", 6.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.122284"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 13], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 33], ["updated_at", "2015-06-01 02:02:31.122284"], ["user_id", 1], ["wpm", 6.0]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.124866"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 25], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 104], ["updated_at", "2015-06-01 02:02:31.124866"], ["user_id", 1], ["wpm", 6.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.128034"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 5], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 82], ["updated_at", "2015-06-01 02:02:31.128034"], ["user_id", 1], ["wpm", 6.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.1ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.130679"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 8], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 92], ["updated_at", "2015-06-01 02:02:31.130679"], ["user_id", 1], ["wpm", 2.0]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.133230"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 12], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 39], ["updated_at", "2015-06-01 02:02:31.133230"], ["user_id", 1], ["wpm", 4.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.135910"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 25], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 75], ["updated_at", "2015-06-01 02:02:31.135910"], ["user_id", 1], ["wpm", 2.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.1ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.138207"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 2], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 22], ["updated_at", "2015-06-01 02:02:31.138207"], ["user_id", 1], ["wpm", 5.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.140784"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 27], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 37], ["updated_at", "2015-06-01 02:02:31.140784"], ["user_id", 1], ["wpm", 3.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.1ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.143381"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 13], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 76], ["updated_at", "2015-06-01 02:02:31.143381"], ["user_id", 1], ["wpm", 6.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.146004"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 13], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 80], ["updated_at", "2015-06-01 02:02:31.146004"], ["user_id", 1], ["wpm", 2.0]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mScript Load (0.1ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.148690"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 15], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 72], ["updated_at", "2015-06-01 02:02:31.148690"], ["user_id", 1], ["wpm", 3.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.151240"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 1], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 49], ["updated_at", "2015-06-01 02:02:31.151240"], ["user_id", 1], ["wpm", 6.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.153831"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 27], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 45], ["updated_at", "2015-06-01 02:02:31.153831"], ["user_id", 1], ["wpm", 2.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mScript Load (0.2ms)[0m  [1mSELECT  "scripts".* FROM "scripts"  WHERE "scripts"."lesson_id" = $1  ORDER BY "scripts"."id" ASC LIMIT 1[0m  [["lesson_id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "performances" ("created_at", "missed_characters", "number_missed", "script_id", "time_elapsed", "total_characters", "updated_at", "user_id", "wpm") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2015-06-01 02:02:31.156532"], ["missed_characters", "u,y,n,c,c,c,c,i,),;,i,t"], ["number_missed", 20], ["script_id", 1], ["time_elapsed", "2000-01-01 00:00:42.000000"], ["total_characters", 39], ["updated_at", "2015-06-01 02:02:31.156532"], ["user_id", 1], ["wpm", 3.0]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-31 22:02:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3943ms (Views: 3933.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/gameplay.css?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/nv.d3.css?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bootstrap-min.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/angular-route.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/devise.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/services/global/empty.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/services/main/postData.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/filters/main/empty.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/filters/global/empty.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/services/main/scriptData.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/global/empty.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainCreatePostCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainGamePlayCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainIndexCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainLessonCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainPostCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainProfileCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainScriptCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainTimerCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/controllers/main/mainTrackCtrl.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/directives/global/nav-bar.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/directives/main/lessons.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/directives/main/ng-enter.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/directives/main/sidebar.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/directives/main/timer.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/directives/main/trial-game.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.min.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/examples/js/angular-route.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/examples/js/angular.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/examples/js/d3.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/examples/js/moment.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/examples/js/nv.d3.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/src/directives/intro.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/src/directives/legendDirectives.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/src/directives/nvD3AxisConfiguration.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/src/directives/nvD3Events.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/src/directives/nvD3LegendConfiguration.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/src/directives/nvd3Directives.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/angularjs-nvd3-directives/src/directives/outro.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/nvd3/nv.d3.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/nvd3/nv.d3.min.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/d3/d3.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/d3/d3.min.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/d3/d3.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:46 -0400
+
+
+Started GET "/assets/bower_components/d3/d3.min.js?body=1" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+
+
+Started GET "/assets/mainIndex.html" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+
+
+Started GET "/assets/nav-bar.html" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+
+
+Started GET "/assets/sidebar.html" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+
+
+Started GET "/assets/trial-game.html" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+
+
+Started POST "/users/sign_in.json" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 6ms
+
+
+Started GET "/languages.json" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+Processing by LanguagesController#index as JSON
+  [1m[35mLanguage Load (0.6ms)[0m  SELECT "languages".* FROM "languages"
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/scripts.json" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+Processing by ScriptsController#index as JSON
+  [1m[36mScript Load (0.4ms)[0m  [1mSELECT "scripts".* FROM "scripts"[0m
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/keyboard2.jpg" for 127.0.0.1 at 2015-05-31 22:02:47 -0400
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-05-31 22:03:17 -0400
+
+
+Started GET "/lessons/JavaScript.json" for 127.0.0.1 at 2015-05-31 22:05:40 -0400
+Processing by LessonsController#index as JSON
+  Parameters: {"track_name"=>"JavaScript"}
+  [1m[35mLanguage Load (1.0ms)[0m  SELECT  "languages".* FROM "languages"  WHERE "languages"."name" = 'JavaScript'  ORDER BY "languages"."id" ASC LIMIT 1
+  [1m[36mLesson Load (0.3ms)[0m  [1mSELECT "lessons".* FROM "lessons"  WHERE "lessons"."language_id" = $1[0m  [["language_id", 1]]
+Completed 200 OK in 36ms (Views: 0.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-05-31 22:05:44 -0400
